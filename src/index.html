@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <!-- Link to the compiled output CSS -->
     <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-900">
-    <nav class="p-4 bg-white shadow flex gap-4">
-        <a href="index.html" class="font-bold text-blue-600">Home</a>
-        <a href="about.html" class="hover:text-blue-600">About</a>
-    </nav>
-    <main class="p-8">
-        <h1 class="text-4xl font-extrabold tracking-tight">Welcome to Home Page</h1>
-        <p class="mt-2 text-slate-600">Styled seamlessly with Tailwind CSS!</p>
-    </main>
-    <script src="./js/main.js"></script>
+<body class="m-0 font-sans bg-gray-100">
+
+  <footer class="bg-[#1f1b18] text-white px-12 pt-10 pb-5">
+
+    <div class="flex flex-col gap-8 md:flex-row md:justify-between">
+
+      <!-- logo et description -->
+      <div class="w-full md:w-1/4 md:pr-8">
+        <h2 class="text-2xl font-bold mb-3">
+          <i class="fa-solid fa-paw text-orange-500"></i> PetNest
+        </h2>
+        <p class="text-sm leading-6 mb-3">
+          Produits, adoption responsable et services pour le bien-être de vos animaux.
+        </p>
+        <div class="flex gap-2">
+          <a href="#" class="w-8 h-8 rounded-full bg-[#2b2622] flex items-center justify-center">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full bg-[#2b2622] flex items-center justify-center">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="w-8 h-8 rounded-full bg-[#2b2622] flex items-center justify-center">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Boutique -->
+      <div class="w-full md:w-1/4 md:pr-8">
+        <h3 class="text-base font-semibold mb-4">Boutique</h3>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Chiens</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Chats</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Rongeurs</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Oiseaux</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Poissons</a>
+      </div>
+
+      <!-- Aide -->
+      <div class="w-full md:w-1/4 md:pr-8">
+        <h3 class="text-base font-semibold mb-4">Aide</h3>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">FAQ</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Livraison</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Retours</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-orange-500">Conditions générales</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="w-full md:w-1/4">
+        <h3 class="text-base font-semibold mb-4">Contact</h3>
+        <p class="text-sm mb-2.5"><i class="fa-solid fa-location-dot text-orange-500 mr-2"></i> 12 rue des Lilas, Casablanca</p>
+        <p class="text-sm mb-2.5"><i class="fa-solid fa-phone text-orange-500 mr-2"></i> 05 22 00 00 00</p>
+        <p class="text-sm mb-2.5"><i class="fa-solid fa-envelope text-orange-500 mr-2"></i> bonjour@petnest.ma</p>
+        <p class="text-sm mb-2.5"><i class="fa-solid fa-clock text-orange-500 mr-2"></i> Lun - Sam : 9 h - 19 h</p>
+      </div>
+
+    </div>
+
+    <!-- bas de page -->
+    <div class="flex flex-col gap-2 md:flex-row md:justify-between mt-8 pt-4 border-t border-neutral-700 text-xs text-neutral-400">
+      <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+      <p>
+        <a href="#" class="hover:text-white">Mentions légales</a> ·
+        <a href="#" class="hover:text-white">Confidentialité</a>
+      </p>
+    </div>
+
+  </footer>
 </body>
 </html>

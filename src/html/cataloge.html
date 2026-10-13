@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catalogue</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind Theme & Custom Styles (Placed AFTER script tag) -->
+    <style type="text/tailwind">
+      @theme {
+        --font-poppins: "Poppins", sans-serif;
+        --color-primary-500: #f97316;
+      }
+    </style>
+
+    <!-- External Styles (Fixed relative paths for GitHub Pages) -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./src/css/cataloge.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="hero-conntainer py-[40px] px-12 bg-[#FFE4D3]">
+        <h1 class="text-3xl font-poppins font-bold text-neutral-900 mb-2">
+          Boutique — Chiens
+        </h1>
+        <p class="text-neutral-700 font-poppins">
+          Alimentation, accessoires, hygiène et jouets sélectionnés par notre
+          équipe.
+        </p>
+      </div>
+    </main>
+
+    <!-- font-poppins now works seamlessly here -->
+    <footer class="bg-neutral-900 font-poppins text-neutral-0 px-12 pt-10 pb-5">
+      <div class="max-w-6xl mx-auto">
+        <div class="footer-colonnes">
+          <!-- logo et description -->
+          <div>
+            <h2 class="text-2xl font-bold mb-3">
+              <i class="fa-solid fa-paw text-primary-500"></i> PetNest
+            </h2>
+            <p class="text-sm leading-6 mb-3 max-w-xs">
+              Produits, adoption responsable et services pour le bien-être de
+              vos animaux.
+            </p>
+            <div class="footer-reseaux flex gap-2">
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Boutique -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Boutique</h3>
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Chiens</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Chats</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Rongeurs</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Oiseaux</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Poissons</a
+            >
+          </div>
+
+          <!-- Aide -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Aide</h3>
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >FAQ</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Livraison</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Retours</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Conditions générales</a
+            >
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Contact</h3>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              12 rue des Lilas, Casablanca
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              05 22 00 00 00
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              bonjour@petnest.ma
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              Lun - Sam : 9 h - 19 h
+            </p>
+          </div>
+        </div>
+        <!-- /footer-colonnes -->
+
+        <!-- bas de page -->
+        <div
+          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400"
+        >
+          <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+          <p>
+            <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
+            <a href="#" class="hover:text-neutral-0">Confidentialité</a>
+          </p>
+        </div>
+      </div>
+      <!-- /max-w-6xl -->
+    </footer>
+  </body>
+</html>

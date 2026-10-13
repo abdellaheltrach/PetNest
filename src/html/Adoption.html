@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption - PetNest</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind Theme & Custom Styles (Placed AFTER script tag) -->
+    <style type="text/tailwind">
+      @theme {
+        --font-poppins: "Poppins", sans-serif;
+        --color-primary-500: #f97316;
+        --color-neutral-0: #ffffff;
+        --color-neutral-400: #a8a29e;
+        --color-neutral-900: #1c1917;
+        --color-secondary: #F0FDFA;
+       } 
+    </style>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+<header class="bg-white shadow-sm">
+  <nav class="flex items-center justify-between p-4">
+    <img src="../les-images/logopetnest.jpg" alt="PetNest logo" class="w-24 md:w-32">
+    <ul class="hidden md:flex items-center gap-6">
+      <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
+      <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
+      <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
+      <li><a href="Services.html" class="hover:text-gray-500">Services</a></li>
+      <li><a href="contact.html" class="hover:text-gray-500">contact</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <a href="Panier.html" aria-label="Panier">
+        <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+      </a>
+      <button id="burger" class="text-3xl md:hidden" aria-label="Menu" aria-expanded="false">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+    </div>
+  </nav>
+  <ul id="mobileMenu" class="hidden flex-col gap-4 p-5 border-t md:hidden">
+    <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
+    <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
+    <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
+    <li><a href="Services-contact.html" class="hover:text-gray-500">Services-contact</a></li>
+    <li><a href="Panier.html" class="hover:text-gray-500">Panier</a></li>
+  </ul>
+</header>
+
+<script>
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  burger.addEventListener("click", function () {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+    const isOpen = !mobileMenu.classList.contains("hidden");
+    burger.innerHTML = isOpen ? '<ion-icon name="close-outline"></ion-icon>' : '<ion-icon name="menu-outline"></ion-icon>';
+    burger.setAttribute("aria-expanded", isOpen);
+  });
+</script>
+
+<section class="w-full bg-secondary/50 bg-[#F0FDFA] py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
+    <div class="max-w-xl">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+        Adopter, c'est un engagement pour la vie
+      </h2>
+      <p class="text-gray-600 text-base md:text-lg">
+        Tous nos animaux sont vaccinés, identifiés et suivis par un vétérinaire. Notre équipe vous accompagne avant et après l'adoption.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full lg:w-auto">
+      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
+        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">48</span>
+        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">animaux à adopter</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
+        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">312</span>
+        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">adoptions en 2025</span>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
+        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">100%</span>
+        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">vaccinés et identifiés</span>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

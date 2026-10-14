@@ -1,27 +1,4 @@
-/* Universal Container Class (following your reference layout from header to footer) */
-.conteneur {
-  width: 100%;
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 48px;  /* matches px-12 */
-  padding-right: 48px;
-}
 
-/* Header Grid / Flex */
-.en-tete-contenu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 5rem;
-}
-
-/* Hero Section */
-.hero-conntainer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
 
 /* Main Content Grid */
 .main-container {
@@ -44,44 +21,3 @@
   }
 }
 
-/* Footer Grid & Flex Layout */
-footer {
-  background-color: #1c1917;
-  color: #FFFFFF;
-}
-
-.footer-colonnes {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-}
-
-@media (min-width: 768px) {
-  .footer-colonnes {
-    grid-template-columns: repeat(4, 1fr); 
-  }
-}
-
-.footer-reseaux {
-  display: flex;
-  gap: 8px;
-}
-
-.footer-reseau {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer-bas {
-  display: flex;
-  flex-direction: column;           
-  gap: 8px;
-}
-
-@media (min-width: 768px) {
-  .footer-bas {
-    flex-direction: row;            
-    justify-content: space-between;
-  }
-}

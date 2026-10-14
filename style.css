@@ -1,4 +1,30 @@
 /* header */
+.conteneur {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 48px;  /* matches px-12 */
+  padding-right: 48px;
+}
+
+
+/* Header Grid / Flex */
+.en-tete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+/* Hero Section */
+.hero-conntainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
 .en-tete-principal {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;

@@ -38,12 +38,24 @@
 .content-wrapper button{
   background-color: #c2410c;
   color: white;
-  border: none;
   padding: 12PX 20PX;
+  border: none;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
 }
 .content-wrapper button:hover{
   background-color:#9a3412 ;
+}
+@media (max-width:760px) {
+  .section2{
+    flex-direction: column;
+  }
+  .photoRocky img{
+    width: 100%;
+    height: auto;
+  }
+  .btn-container{
+    align-items: center;
+  }
 }

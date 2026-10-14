@@ -1,57 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adoption - PetNest</title>
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adoption - petnest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../css/Adoption.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/Adoption.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind Theme & Custom Styles -->
     <style type="text/tailwind">
       @theme {
         --font-poppins: "Poppins", sans-serif;
         --color-primary-500: #f97316;
-        --color-neutral-0: #ffffff;
-        --color-neutral-400: #a8a29e;
-        --color-neutral-900: #1c1917;
-        --color-secondary: #F0FDFA;
-       } 
+      }
     </style>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+    <!-- External Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../css/cataloge.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 <body>
-<header class="bg-white shadow-sm">
-  <nav class="flex items-center justify-between p-4">
-    <img src="../les-images/logopetnest.jpg" alt="PetNest logo" class="w-24 md:w-32">
-    <ul class="hidden md:flex items-center gap-6">
-      <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
-      <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
-      <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
-      <li><a href="Services.html" class="hover:text-gray-500">Services</a></li>
-      <li><a href="contact.html" class="hover:text-gray-500">contact</a></li>
-    </ul>
-    <div class="flex items-center gap-4">
-      <a href="Panier.html" aria-label="Panier">
-        <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
-      </a>
-      <button id="burger" class="text-3xl md:hidden" aria-label="Menu" aria-expanded="false">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-    </div>
-  </nav>
-  <ul id="mobileMenu" class="hidden flex-col gap-4 p-5 border-t md:hidden">
-    <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
-    <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
-    <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
-    <li><a href="Services-contact.html" class="hover:text-gray-500">Services-contact</a></li>
-    <li><a href="Panier.html" class="hover:text-gray-500">Panier</a></li>
-  </ul>
-</header>
 
+    <!-- header -->
+    <header class="en-tete-principal">
+  <div class="conteneur">
+    <nav class="en-tete-contenu">
+      <!-- Logo -->
+      <a href="/index.html" class="logo-lien">
+        <img
+          src="/src/les-images/Logo.png"
+          alt="PetNest logo"
+          class="logo-img"
+        />
+      </a>
+      <!-- Liens pc -->
+      <ul class="menu-pc">
+        <li>
+          <a href="/index.html" class="hover:text-primary-700">Accueil</a>
+        </li>
+        <li>
+          <a href="./cataloge.html" class="lien-actif hover:text-primary-700">Boutique</a>
+        </li>
+        <li>
+          <a href="./Adoption.html" class="hover:text-primary-700">Adoption</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Services</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Droite -->
+      <div class="en-tete-droite">
+        <!-- Panier pc + tele -->
+        <a
+          href="Panier.html"
+          aria-label="Panier"
+          class="panier-lien hover:text-primary-700"
+        >
+          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+          <span class="badge-panier">2</span>
+        </a>
+
+        <!-- Bouton RDV pc (hidden on smaller screens) -->
+        <a
+          href="Services-contact.html"
+          class="btn-rdv-pc"
+        >
+          Prendre RDV
+        </a>
+
+        <!-- Burger : phone seulement -->
+        <button
+          id="burger"
+          class="burger-btn md:hidden cursor-pointer"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Menu tele -->
+  <div id="mobileMenu" class="menu-mobile hidden">
+    <ul class="menu-mobile-list">
+      <li>
+        <a href="Accueil.html" class="menu-mobile-item text-primary-700">
+          Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Botique.html" class="menu-mobile-item">
+          Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Adoption.html" class="menu-mobile-item">
+          Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Services <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Contact <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+    <!-- button tele -->
+    <a href="Services-contact.html" class="btn-rdv-mobile">
+      <input type="button" value="" />
+    </a>
+
+    <!-- icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </div>
+</header>
 <script>
   const burger = document.getElementById("burger");
   const mobileMenu = document.getElementById("mobileMenu");
@@ -100,6 +188,60 @@
     <div class="btn-container">
       <button type="button">Demander à adopter Rocky</button>
     </div>
+  </div>
+</section>
+<section class="section3">
+  <div class="form-demande-container">
+    <div class="form-intro">
+      <p class="subtitle">FORMULAIRE</p>
+      <h2>Demande d'adoption</h2>
+      <p class="description">
+        Notre équipe vous recontacte sous 48 h pour organiser une rencontre avec l'animal. Les champs marqués * sont obligatoires.
+      </p>
+    </div>
+    <form class="formulaire">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="nom">Nom complet *</label>
+          <input type="text" id="nom" name="nom" placeholder="Sara Benali">
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse e-mail *</label>
+          <input type="email" id="email" name="email" placeholder="sara.benali@example.com">
+        </div> 
+        <div class="form-group">
+          <label for="telephone">Téléphone *</label>
+          <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
+        </div> 
+        <div class="form-group">
+          <label for="animal">Animal choisi *</label>
+          <select id="animal" name="animal">
+            <option value="Rocky-chien,4ans">Rocky — chien, 4 ans</option>
+            <option value="lucas-cat,2ans">Lucas — chat, 2 ans</option>
+            <option value="simba-cat,1an">Simba — chat, 1 an</option>
+          </select>   
+        </div>
+        <div class="form-group full-width">
+          <label for="logement">Type de logement *</label>
+          <select id="logement" name="type-de-logement">
+            <option value="maison avec jardin">Maison avec jardin</option>
+            <option value="maison normal">Maison normale</option>
+            <option value="appartement">Appartement</option>
+          </select>   
+        </div>
+        <div class="form-group full-width">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" placeholder="Parlez-nous de votre foyer et de votre rythme de vie..."></textarea>
+        </div>
+      </div>
+      <div class="form-group-checkbox">
+        <input type="checkbox" id="acceptation" name="acceptation">
+        <label for="acceptation">J'accepte d'être recontacté(e) au sujet de ma demande. *</label>
+      </div>
+      <div class="form-action">
+        <button type="submit">Envoyer ma demande</button>
+      </div>
+    </form>
   </div>
 </section>
 </body>

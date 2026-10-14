@@ -6,45 +6,96 @@
     <title>Détail produit</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/src/css/detail-produit.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <footer class="bg-neutral-900 text-neutral-0 px-12 pt-10 pb-5">
+  
+  <section class="produit-grille max-w-6xl mx-auto px-4 py-6 md:px-8 lg:px-12">
+    <!--photos -->
+    <div>
+      <img src="../les-images/Croquette.png" alt="Vue principale" class="w-full h-56 md:h-72 lg:h-80 object-cover rounded-2xl mb-3">
 
-  <div class="max-w-6xl mx-auto">
-
-    <div class="footer-colonnes">
-
-      <!-- logo et description -->
-      <div>
-        <h2 class="text-2xl font-bold mb-3">
-          <i class="fa-solid fa-paw text-primary-500"></i> PetNest
-        </h2>
-        <p class="text-sm leading-6 mb-3 max-w-xs">
-          Produits, adoption responsable et services pour le bien-être de vos animaux.
-        </p>
-        <div class="footer-reseaux">
-          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-            <i class="fa-solid fa-share-nodes"></i>
-          </a>
-        </div>
+      <div class="produit-vues">
+        <img src="../les-images/vue1.png" alt="Vue1" class="w-full h-20 object-cover rounded-xl">
+        <img src="../les-images/vue2.png" alt="vue2" class="w-full h-20 object-cover rounded-xl">
+        <img src="../les-images/vue3.png" alt="vue3" class="w-full h-20 object-cover rounded-xl">
+        <img src="../les-images/vue4.png" alt="vue4" class="w-full h-20 object-cover rounded-xl">
       </div>
 
-      <!-- Boutique -->
-      <div>
+      
+       <div>
+          <h1 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Croquette saumon & riz 10 Kg</h1>
+       </div>
+
+       <div class="produit-prix mb-4">
+        <span class="text-2xl font-bold text-neutral-900">49,90 €</span>
+        <span class="text-xs text-neutral-400">TTC · soit 4,99 € / kg</span>
+       </div>
+
+       <p class="text-sm leading-6 text-neutral-600 mb-5">
+        Recette riche en saumon frais pour chiens adultes de toutes tailles.Sans colorant ni conservateur artificiel.
+       </p>
+
+       <div class="produit-achat mb-5">
+        <div class="produit-quantite border border-neutral-200 rounded-lg h-10">
+          <button class="w-10 h-10 text-lg">-</button>
+          <span class="w-8 text-center text-sm">1</span>
+          <span class="w-10 h-10 text-lg">+</span>
+        </div>
+        <button class="w-full h-10 bg-orange-700 text-white text-sm font-semibold rounded-lg hover:bg-orange-800"> Ajouter au Panier</button>
+       </div>
+
+       <ul>
+        <li class="produit-avantage mb-2">
+          <i class="fa-solid fa-check text-green-700"></i>Livraison offerte dès 49 €
+        </li>
+        <li class="produit-avantage mb-2">
+          <i class="fa-solid fa-check text-green-700"></i>Retour gratuit  sous 30 jours
+        </li>
+        <li class="produit-avantage">
+          <i class="fa-solid fa-check text-green-700"></i>Conseils personnalisés en boutique
+        </li>
+       </ul>
+    </div>
+  </section>
+  
+  <footer class="bg-neutral-900 text-neutral-0 px-12 pt-10 pb-5">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="footer-colonnes">
+
+        <!-- logo et description -->
+        <div>
+          <h2 class="text-2xl font-bold mb-3">
+            <i class="fa-solid fa-paw text-primary-500"></i> PetNest
+          </h2>
+          <p class="text-sm leading-6 mb-3 max-w-xs">
+            Produits, adoption responsable et services pour le bien-être de vos animaux.
+          </p>
+          <div class="footer-reseaux">
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+              <i class="fa-solid fa-share-nodes"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Boutique -->
+        <div>
         <h3 class="text-base font-semibold mb-4" >Boutique</h3>
         <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chiens</a>
         <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chats</a>
         <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Rongeurs</a>
         <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Oiseaux</a>
         <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Poissons</a>
-      </div>
+        </div>
 
       <!-- Aide -->
       <div>
@@ -85,8 +136,6 @@
       </div>
 
   </div>
-
-</footer>
-    
+  </footer>   
 </body>
 </html>

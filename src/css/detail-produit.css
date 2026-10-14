@@ -1,0 +1,39 @@
+.bg-peche {
+  background-color: #FFE4D3;
+}
+.produit grille{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+/* palce des photos et les écritures sur ordinatures et les tablettes*/
+@media (min-widht: 768px){
+  .produit grille {
+    grid-template-columns: 1.2fr 1fr;
+    gap:  32px;
+  }
+}
+.produit-vues {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+/* Prix et "TTC"*/
+.produit-prix {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.produit-achat {
+  display: flex;
+  gap: 12px;
+}
+.produit-quantite {
+  display: flex;
+  align-items: center;
+}
+.produit-avantage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -1,132 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détail produit</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/src/css/detail-produit.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail produit</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary-500: #f97316;
+      --color-neutral-0: #ffffff;
+      --color-neutral-400: #a8a29e;
+      --color-neutral-900: #1c1917;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/src/css/detail-produit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-  
-  <section class="produit-grille max-w-6xl mx-auto px-4 py-6 md:px-8 lg:px-12">
-    <!--photos -->
-    <div>
-      <img src="../les-images/Croquette.png" alt="Vue principale" class="w-full h-56 md:h-72 lg:h-80 object-cover rounded-2xl mb-3">
 
-      <div class="produit-vues">
-        <img src="../les-images/vue1.png" alt="Vue1" class="w-full h-20 object-cover rounded-xl">
-        <img src="../les-images/vue2.png" alt="vue2" class="w-full h-20 object-cover rounded-xl">
-        <img src="../les-images/vue3.png" alt="vue3" class="w-full h-20 object-cover rounded-xl">
-        <img src="../les-images/vue4.png" alt="vue4" class="w-full h-20 object-cover rounded-xl">
+  >
+  <header class="bg-white shadow-sm">
+    <nav class="flex items-center justify-between p-4">
+      <img src="../les-images/logopetnest.jpg" alt="PetNest logo" class="w-24 md:w-32">
+      <ul class="hidden md:flex items-center gap-6">
+        <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
+        <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
+        <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
+        <li><a href="Services.html" class="hover:text-gray-500">Services</a></li>
+        <li><a href="contact.html" class="hover:text-gray-500">contact</a></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <a href="Panier.html" aria-label="Panier">
+          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+        </a>
+        <button id="burger" class="text-3xl md:hidden" aria-label="Menu" aria-expanded="false">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+    <ul id="mobileMenu" class="hidden flex-col gap-4 p-5 border-t md:hidden">
+      <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
+      <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
+      <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
+      <li><a href="Services-contact.html" class="hover:text-gray-500">Services-contact</a></li>
+      <li><a href="Panier.html" class="hover:text-gray-500">Panier</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section class="produit-grille max-w-6xl mx-auto px-4 py-6 md:px-8 lg:px-12">
+
+      <div>
+        <img src="../les-images/Croquettes .png" alt="Croquettes saumon et riz, vue principale"
+             class="w-full h-56 md:h-72 lg:h-80 object-cover rounded-2xl mb-3">
+        <div class="produit-vues">
+          <img src="../les-images/vue1.png" alt="Vue 1" class="w-full h-16 md:h-20 object-cover rounded-xl">
+          <img src="../les-images/vue2.png" alt="Vue 2" class="w-full h-16 md:h-20 object-cover rounded-xl">
+          <img src="../les-images/vue3.png" alt="Vue 3" class="w-full h-16 md:h-20 object-cover rounded-xl">
+          <img src="../les-images/vue4.png" alt="Vue 4" class="w-full h-16 md:h-20 object-cover rounded-xl">
+        </div>
       </div>
 
-      
-       <div>
-          <h1 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">Croquette saumon & riz 10 Kg</h1>
-       </div>
+      <div>
 
-       <div class="produit-prix mb-4">
-        <span class="text-2xl font-bold text-neutral-900">49,90 €</span>
-        <span class="text-xs text-neutral-400">TTC · soit 4,99 € / kg</span>
-       </div>
+        <h1 class="text-2xl md:text-3xl font-bold text-neutral-900 mb-3">
+          Croquettes saumon &amp; riz 10 kg
+        </h1>
 
-       <p class="text-sm leading-6 text-neutral-600 mb-5">
-        Recette riche en saumon frais pour chiens adultes de toutes tailles.Sans colorant ni conservateur artificiel.
-       </p>
-
-       <div class="produit-achat mb-5">
-        <div class="produit-quantite border border-neutral-200 rounded-lg h-10">
-          <button class="w-10 h-10 text-lg">-</button>
-          <span class="w-8 text-center text-sm">1</span>
-          <span class="w-10 h-10 text-lg">+</span>
+        <div class="produit-prix mb-4">
+          <span class="text-2xl font-bold text-neutral-900">49,90 €</span>
+          <span class="text-xs text-neutral-400">TTC · soit 4,99 € / kg</span>
         </div>
-        <button class="w-full h-10 bg-orange-700 text-white text-sm font-semibold rounded-lg hover:bg-orange-800"> Ajouter au Panier</button>
-       </div>
 
-       <ul>
-        <li class="produit-avantage mb-2">
-          <i class="fa-solid fa-check text-green-700"></i>Livraison offerte dès 49 €
-        </li>
-        <li class="produit-avantage mb-2">
-          <i class="fa-solid fa-check text-green-700"></i>Retour gratuit  sous 30 jours
-        </li>
-        <li class="produit-avantage">
-          <i class="fa-solid fa-check text-green-700"></i>Conseils personnalisés en boutique
-        </li>
-       </ul>
-    </div>
-  </section>
-  
-  <footer class="bg-neutral-900 text-neutral-0 px-12 pt-10 pb-5">
+        <p class="text-sm leading-6 text-neutral-600 mb-5">
+          Recette riche en saumon frais pour chiens adultes de toutes tailles. Sans colorant ni conservateur artificiel.
+        </p>
 
-    <div class="max-w-6xl mx-auto">
+        <div class="produit-achat mb-5">
+          <div class="produit-quantite border border-neutral-200 rounded-lg h-10">
+            <button id="btn-moins" class="w-10 h-10 text-lg">−</button>
+            <span id="quantite" class="w-8 text-center text-sm">1</span>
+            <button id="btn-plus" class="w-10 h-10 text-lg">+</button>
+          </div>
+          <button class="w-full h-10 bg-orange-700 text-white text-sm font-semibold rounded-lg hover:bg-orange-800">
+            Ajouter au panier
+          </button>
+        </div>
 
+        <ul class="bg-neutral-100 rounded-lg p-4 text-xs text-neutral-600">
+          <li class="produit-avantage mb-2">
+            <i class="fa-solid fa-check text-green-700"></i> Livraison offerte dès 49 €
+          </li>
+          <li class="produit-avantage mb-2">
+            <i class="fa-solid fa-check text-green-700"></i> Retour gratuit sous 30 jours
+          </li>
+          <li class="produit-avantage">
+            <i class="fa-solid fa-check text-green-700"></i> Conseils personnalisés en boutique
+          </li>
+        </ul>
+
+      </div>
+    </section>
+    
+  </main>
+  <footer class="bg-neutral-900 text-neutral-0 pt-10 pb-5">
+    <div class="conteneur">
       <div class="footer-colonnes">
 
-        <!-- logo et description -->
         <div>
-          <h2 class="text-2xl font-bold mb-3">
-            <i class="fa-solid fa-paw text-primary-500"></i> PetNest
-          </h2>
+          <a href="Accueil.html" class="block mb-3">
+            <img src="../les-images/Logo footer.png" alt="PetNest logo">
+          </a>
           <p class="text-sm leading-6 mb-3 max-w-xs">
             Produits, adoption responsable et services pour le bien-être de vos animaux.
           </p>
           <div class="footer-reseaux">
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
-              <i class="fa-solid fa-share-nodes"></i>
-            </a>
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="Partager"><i class="fa-solid fa-share-nodes"></i></a>
           </div>
         </div>
 
-        <!-- Boutique -->
         <div>
-        <h3 class="text-base font-semibold mb-4" >Boutique</h3>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chiens</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chats</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Rongeurs</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Oiseaux</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Poissons</a>
+          <h3 class="text-base font-semibold mb-4">Boutique</h3>
+          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Chiens</a>
+          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Chats</a>
+          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Rongeurs</a>
+          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Oiseaux</a>
+          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Poissons</a>
         </div>
 
-      <!-- Aide -->
-      <div>
-        <h3 class="text-base font-semibold mb-4">Aide</h3>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">FAQ</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Livraison</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Retours</a>
-        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Conditions générales</a>
+        <div>
+          <h3 class="text-base font-semibold mb-4">Aide</h3>
+          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">FAQ</a>
+          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Livraison</a>
+          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Retours</a>
+          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Conditions générales</a>
+        </div>
+
+        <div>
+          <h3 class="text-base font-semibold mb-4">Contact</h3>
+          <p class="text-sm mb-2.5"><i class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"></i> 12 rue des Lilas, Casablanca</p>
+          <p class="text-sm mb-2.5"><i class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"></i> 05 22 00 00 00</p>
+          <p class="text-sm mb-2.5"><i class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"></i> bonjour@petnest.ma</p>
+          <p class="text-sm mb-2.5"><i class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"></i> Lun - Sam : 9 h - 19 h</p>
+        </div>
+
       </div>
 
-      <!-- Contact -->
-      <div>
-        <h3 class="text-base font-semibold mb-4">Contact</h3>
-        <p class="text-sm mb-2.5">
-        <i class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"></i> 12 rue des Lilas, Casablanca
-        </p>
-
-        <p class="text-sm mb-2.5">
-        <i class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"></i> 05 22 00 00 00
-        </p>
-
-        <p class="text-sm mb-2.5">
-        <i class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"></i> bonjour@petnest.ma
-        </p>
-
-        <p class="text-sm mb-2.5">
-        <i class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"></i> Lun - Sam : 9 h - 19 h
-        </p>
-      </div>
-
-    <!-- bas de page -->
       <div class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400">
         <p>&copy; 2026 PetNest. Tous droits réservés.</p>
         <p>
@@ -135,7 +161,33 @@
         </p>
       </div>
 
-  </div>
-  </footer>   
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Menu burger
+    var burger = document.getElementById("burger");
+    var menu = document.getElementById("mobileMenu");
+    burger.onclick = function () {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+
+    // Quantité
+    var quantite = 1;
+    var affichage = document.getElementById("quantite");
+    document.getElementById("btn-plus").onclick = function () {
+      quantite = quantite + 1;
+      affichage.textContent = quantite;
+    };
+    document.getElementById("btn-moins").onclick = function () {
+      if (quantite > 1) {
+        quantite = quantite - 1;
+        affichage.textContent = quantite;
+      }
+    };
+  </script>
+
 </body>
 </html>

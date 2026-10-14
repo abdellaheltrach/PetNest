@@ -204,8 +204,6 @@ footer {
   }
 }
 
-<<<<<<< HEAD
-=======
 /* lien active */
 
 .lien-actif {
@@ -214,4 +212,3 @@ footer {
   border-bottom: 2px solid var(--color-primary-500, #f97316);
   padding-bottom: 4px;
 }
->>>>>>> abe9dfc643f3bc3ff89f8437c365e7323d57566f

@@ -49,7 +49,7 @@ footer {
 /* lien active */
 
 .lien-actif {
-  color: var(--color-primary-500, #f97316);
+  color: #EA580C;
   font-weight: 600;
   border-bottom: 2px solid var(--color-primary-500, #f97316);
   padding-bottom: 4px;

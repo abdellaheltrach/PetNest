@@ -240,10 +240,6 @@ img {
 .bouton-principal:hover {
   background-color: #F05817;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 .bouton {
   display: inline-block;
@@ -266,7 +262,7 @@ a {
   color: #4B5563;
   margin-bottom: 32px;
 }
-h1, h2, h3, h4 {
+h1, h2, h4 {
   font-family: 'Poppins', Arial, sans-serif;
   color: #0F1B2D;
 }

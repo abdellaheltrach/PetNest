@@ -168,7 +168,7 @@
     <main class="py-8">
       <div class="conteneur main-container">
         <!-- Sidebar Filter (Hidden on mobile via Tailwind 'hidden md:block') -->
-        <div class="border-2 bg-[#FAFAF9] rounded-[20px] p-6 space-y-6">
+        <div class=" bg-[#FAFAF9] rounded-[20px] p-6 space-y-6">
           <!-- Animal Filter -->
           <nav>
             <p class="font-poppins font-semibold mb-4">Animal</p>
@@ -212,30 +212,84 @@
           </div>
         </div>
 
+        <!-- main header -->
+
         <div class="space-y-6">
-          <div class="border-2 bg-[#FAFAF9] rounded-[20px] p-6">
+          <div class=" bg-[#FAFAF9] rounded-[20px] p-6">
             <div class="main-header">
-              <!-- Item 1 -->
               <p class="font-inter">6 produits affichés (aria-live)</p>
 
-              <!-- Item 2 -->
               <div class="flex flex-col gap-3">
                 <p>Trier par</p>
-                <select class="price-selector ">
+                <select class="price-selector">
                   <option selected="">Prix croissant</option>
                   <option>Prix décroissant</option>
                 </select>
               </div>
             </div>
-            <div class="products product-card my-[24px]">
-              <div class="border-2 bg-[#FAFAF9] rounded-[20px]">
-                <img
-                  src="../les-images/DogAdoption.jpg"
-                  altfull=""
-                  class="w-[343px] rounded-[20px]"
-                />
+
+            <!-- product grid -->
+
+            <div class="product-grid">
+
+              <!-- product 1 -->
+              <div class=" product-card my-[24px]">
+                <div class=" bg-[#FAFAF9] rounded-[20px]">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    altfull=""
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                  <h3 class="font-poppins font-semibold text-sm mb-2">
+                    Croquettes saumon & riz 
+                  </h3>
+                  <div class="card-details"> 
+                    <p class="font-poppins font-bold text-lg">29,99 €</p>
+                    <button class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white">Ajouter</button>
+                  </div>
               </div>
+                
+
+                <!-- product 2 -->
+              <div class=" product-card my-[24px]">
+                <div class=" bg-[#FAFAF9] rounded-[20px]">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    altfull=""
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                  <h3 class="font-poppins font-semibold text-sm mb-2">
+                    Croquettes saumon & riz 
+                  </h3>
+                  <div class="card-details"> 
+                    <p class="font-poppins font-bold text-lg">29,99 €</p>
+                    <button class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white">Ajouter</button>
+                  </div>
+              </div>
+
+
+                <!-- product 3 -->
+              <div class=" product-card my-[24px]">
+                <div class=" bg-[#FAFAF9] rounded-[20px]">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    altfull=""
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                  <h3 class="font-poppins font-semibold text-sm mb-2">
+                    Croquettes saumon & riz 
+                  </h3>
+                  <div class="card-details"> 
+                    <p class="font-poppins font-bold text-lg">29,99 €</p>
+                    <button class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white">Ajouter</button>
+                  </div>
+              </div>
+
             </div>
+            <!-- end product grid -->
           </div>
         </div>
       </div>

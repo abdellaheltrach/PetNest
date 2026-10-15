@@ -1,0 +1,38 @@
+.section-hero{
+  background-color:#FFF4ED;
+  width: 100%;
+  padding: 30px;
+}
+.conteneur{
+  margin-top: 50px;
+  margin-left:100px;
+}
+.conteneur h2{
+  font-family: Arial, Helvetica, sans-serif ;
+  font-size: medium;
+  font-weight: 12px;
+  color: #C2410C;
+}
+.conteneur h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #1C1917;
+    inline-size: none;
+}
+.conteneur p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #57534E;
+}
+@media (max-width: 760px){
+  .section-hero{
+    flex-direction: column;
+  }
+  .conteneur{
+    margin: 0 auto;
+    font: size 8px; ;
+    font-weight: 90PX;
+
+  }
+}

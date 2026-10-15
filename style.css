@@ -205,7 +205,7 @@ footer {
 .lien-actif {
   color: #EA580C;
   font-weight: 600;
-  border-bottom: 2px solid var(--color-primary-500, #f97316);
+  border-bottom: 2px solid var(--color-primary-500,#C2410C);
   padding-bottom: 4px;
 }
 img {
@@ -247,7 +247,7 @@ a {
 
 .bouton {
   display: inline-block;
-  padding: 14px 28px;
+  padding: 14px 24px;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
@@ -295,6 +295,8 @@ img {
   display: flex;
   align-items: center;
   gap: 32px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .hero-texte {
@@ -312,7 +314,46 @@ img {
     display: flex;
     flex-direction: column;
     gap:24px;
-   
   }
+  .bouton{
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px;
+
+  }
+  
+}
+.mini_header{
+ border-radius: 8px;
+}
+.mini_header .jota{
+  display: flex;
+  justify-content: flex-start;
+  gap:24px;
+}
+.mini_header .bt-voir_tout{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.jota{
+  font-size: 30px;
+  font-weight: 600;
+  font:Poppins;
+  
+  
+}
+.bt-voir_tout{
+  color:#C2410C;
+  position: absolute;
+  bottom:10px;
+  left:70rem
+
+
+
+}
+@media {
   
 }

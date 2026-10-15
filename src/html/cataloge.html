@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>catalogue</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
     <!-- Tailwind Theme & Custom Styles -->
     <style type="text/tailwind">
       @theme {
@@ -24,7 +21,6 @@
         --color-primary-500: #f97316;
       }
     </style>
-
     <!-- External Styles -->
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="../css/cataloge.css" />
@@ -388,7 +384,7 @@
             <h3 class="text-base font-semibold mb-4">Contact</h3>
             <p class="text-sm mb-2.5">
               <i
-                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"
+                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"w
               ></i>
               12 rue des Lilas, Casablanca
             </p>
@@ -412,11 +408,8 @@
             </p>
           </div>
         </div>
-
-        <!-- bas de page -->
         <div
-          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400"
-        >
+          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400">
           <p>&copy; 2026 PetNest. Tous droits réservés.</p>
           <p>
             <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
@@ -425,11 +418,9 @@
         </div>
       </div>
     </footer>
-
     <script>
       const burger = document.getElementById("burger");
       const mobileMenu = document.getElementById("mobileMenu");
-
       burger.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
         mobileMenu.classList.toggle("flex");

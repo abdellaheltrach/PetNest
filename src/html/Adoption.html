@@ -29,7 +29,6 @@
     />
   </head>
 <body>
-
     <!-- header -->
     <header class="en-tete-principal">
   <div class="conteneur">
@@ -191,7 +190,7 @@
   </div>
 </section>
 <section class="section3">
-  <div class="form-demande-container">
+  <div class="adoption-wrapper">
     <div class="form-intro">
       <p class="subtitle">FORMULAIRE</p>
       <h2>Demande d'adoption</h2>
@@ -199,49 +198,51 @@
         Notre équipe vous recontacte sous 48 h pour organiser une rencontre avec l'animal. Les champs marqués * sont obligatoires.
       </p>
     </div>
-    <form class="formulaire">
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="nom">Nom complet *</label>
-          <input type="text" id="nom" name="nom" placeholder="Sara Benali">
+    <div class="form-card">
+      <form class="formulaire">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" placeholder="Sara Benali">
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="sara.benali@">
+          </div> 
+          <div class="form-group">
+            <label for="telephone">Téléphone *</label>
+            <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
+          </div> 
+          <div class="form-group">
+            <label for="animal">Animal choisi *</label>
+            <select id="animal" name="animal">
+              <option value="Rocky-chien,4ans">Rocky — chien, 4 ans</option>
+              <option value="lucas-cat,2ans">Lucas — chat, 2 ans</option>
+              <option value="simba-cat,1an">Simba — chat, 1 an</option>
+            </select>   
+          </div>
+          <div class="form-group full-width">
+            <label for="logement">Type de logement *</label>
+            <select id="logement" name="type-de-logement">
+              <option value="maison avec jardin">Maison avec jardin</option>
+              <option value="maison normal">Maison normale</option>
+              <option value="appartement">Appartement</option>
+            </select>   
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Parlez-nous de votre foyer et de votre rythme de vie..."></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Adresse e-mail *</label>
-          <input type="email" id="email" name="email" placeholder="sara.benali@example.com">
-        </div> 
-        <div class="form-group">
-          <label for="telephone">Téléphone *</label>
-          <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
-        </div> 
-        <div class="form-group">
-          <label for="animal">Animal choisi *</label>
-          <select id="animal" name="animal">
-            <option value="Rocky-chien,4ans">Rocky — chien, 4 ans</option>
-            <option value="lucas-cat,2ans">Lucas — chat, 2 ans</option>
-            <option value="simba-cat,1an">Simba — chat, 1 an</option>
-          </select>   
+        <div class="form-group-checkbox">
+          <input type="checkbox" id="acceptation" name="acceptation">
+          <label for="acceptation">J'accepte d'être recontacté(e) au sujet de ma demande. *</label>
         </div>
-        <div class="form-group full-width">
-          <label for="logement">Type de logement *</label>
-          <select id="logement" name="type-de-logement">
-            <option value="maison avec jardin">Maison avec jardin</option>
-            <option value="maison normal">Maison normale</option>
-            <option value="appartement">Appartement</option>
-          </select>   
+        <div class="form-action">
+          <button type="submit">Envoyer ma demande</button>
         </div>
-        <div class="form-group full-width">
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" placeholder="Parlez-nous de votre foyer et de votre rythme de vie..."></textarea>
-        </div>
-      </div>
-      <div class="form-group-checkbox">
-        <input type="checkbox" id="acceptation" name="acceptation">
-        <label for="acceptation">J'accepte d'être recontacté(e) au sujet de ma demande. *</label>
-      </div>
-      <div class="form-action">
-        <button type="submit">Envoyer ma demande</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </section>
 </body>

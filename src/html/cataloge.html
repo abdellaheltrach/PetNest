@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adoption - PetNest</title>
+    <title>PetNest - Boutique</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="/src/css/cataloge.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -45,19 +46,18 @@
           <!-- Liens Desktop -->
           <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
             <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
-            <li><a href="./Boutique.html" class="hover:text-orange-600 transition">Boutique</a></li>
+            <li><a href="/src/html/cataloge.html" class="lien-actif transition">Boutique</a></li>
             <li>
-              <a href="./Adoption.html" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">
+              <a href="/src/html/Adoption.html" class="hover:text-orange-600 transition">
                 Adoption
               </a>
             </li>
-            <li><a href="./Services.html" class="hover:text-orange-600 transition">Services</a></li>
-            <li><a href="./Contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+            <li><a href="/src/html/service.html" class="hover:text-orange-600 transition">Services et Contact</a></li>
           </ul>
 
           <!-- Action Droite -->
           <div class="flex items-center space-x-4">
-            <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
+            <a href="/src/html/panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
               <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
               <span class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 2
@@ -65,7 +65,7 @@
             </a>
 
             <a
-              href="Services-contact.html"
+              href="/src/html/service.html"
               class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
             >
               Prendre RDV
@@ -85,19 +85,18 @@
       </div>
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
-        <a href="index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Boutique.html" class="flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Adoption.html" class="flex justify-between items-center py-2 text-orange-600 font-semibold">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Services.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Contact.html" class="flex justify-between items-center py-2 font-medium">Contact <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Services-contact.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
+        <a href="/index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/cataloge.html" class="lien-actif flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/service.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/service.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
           Prendre RDV
         </a>
       </div>
     </header>
 
     <!-- hero -->
-    <div class="hero-conntainer py-[40px] bg-[#FFE4D3]">
+    <div class=" py-[40px] bg-[#FFE4D3]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <h1 class="text-3xl font-poppins font-bold text-neutral-900 mb-2">
           Boutique — Chiens
@@ -177,7 +176,7 @@
             <div class="product-grid w-full">
               <!-- Product 1 -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
                   <img
                     src="../les-images/DogAdoption.jpg"
                     alt="Croquettes saumon & riz"
@@ -201,7 +200,7 @@
 
               <!-- Product 2 (Example for 3 columns) -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
                   <img
                     src="../les-images/DogAdoption.jpg"
                     alt="Croquettes saumon & riz"
@@ -225,7 +224,7 @@
 
               <!-- Product 3 (Example for 3 columns) -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
                   <img
                     src="../les-images/DogAdoption.jpg"
                     alt="Croquettes saumon & riz"
@@ -263,25 +262,25 @@
               Produits, adoption responsable et services pour le bien-être de vos animaux.
             </p>
             <div class="flex space-x-3">
-              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-youtube"></i></a>
-              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-solid fa-share-nodes"></i></a>
+              <a href="https://www.instagram.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.facebook.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-solid fa-share-nodes"></i></a>
             </div>
           </div>
           <div>
             <h3 class="font-semibold mb-4 text-lg">Boutique</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
-              <li><a href="./Boutique.html" class="hover:text-white transition">Chiens</a></li>
-              <li><a href="./Boutique.html" class="hover:text-white transition">Chats</a></li>
-              <li><a href="./Boutique.html" class="hover:text-white transition">Rongeurs</a></li>
+              <li><a href="/src/html/cataloge.html" class=" hover:text-white transition">Chiens</a></li>
+              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Chats</a></li>
+              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Rongeurs</a></li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold mb-4 text-lg">Aide</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
-              <li><a href="#" class="hover:text-white transition">FAQ</a></li>
-              <li><a href="#" class="hover:text-white transition">Livraison</a></li>
-              <li><a href="#" class="hover:text-white transition">Retours</a></li>
+              <li><a href="/src/html/service.html" class="hover:text-white transition">FAQ</a></li>
+              <li><a href="/src/html/service.html" class="hover:text-white transition">Livraison</a></li>
+              <li><a href="/src/html/service.html" class="hover:text-white transition">Retours</a></li>
             </ul>
           </div>
           <div>

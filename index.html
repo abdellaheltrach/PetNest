@@ -3,22 +3,305 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <!-- Link to the compiled output CSS -->
-    <link rel="stylesheet" href="/style.css" />
+    <title>catalogue</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind Theme & Custom Styles -->
+    <style type="text/tailwind">
+      @theme {
+        --font-poppins: "Poppins", sans-serif;
+        --color-primary-500: #f97316;
+      }
+    </style>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../css/cataloge.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
-  <body class="bg-slate-50 text-slate-900">
-    <nav class="p-4 bg-[--color-neutral-900] shadow flex gap-4">
-      <a href="index.html" class="font-bold text-blue-600">Home</a>
-      <a href="about.html" class="hover:text-[-color-primary-700]">About</a>
+  <body>
+    <!-- header -->
+    <header class="en-tete-principal">
+  <div class="conteneur">
+    <nav class="en-tete-contenu">
+      <!-- Logo -->
+      <a href="/index.html" class="logo-lien">
+        <img
+          src="/src/les-images/Logo.png"
+          alt="PetNest logo"
+          class="logo-img"
+        />
+      </a>
+
+      <!-- Liens pc -->
+      <ul class="menu-pc">
+        <li>
+          <a href="/index.html" class="hover:text-primary-700">Accueil</a>
+        </li>
+        <li>
+          <a href="./cataloge.html" class="lien-actif hover:text-primary-700">Boutique</a>
+        </li>
+        <li>
+          <a href="./Adoption.html" class="hover:text-primary-700">Adoption</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Services</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Droite -->
+      <div class="en-tete-droite">
+        <!-- Panier pc + tele -->
+        <a
+          href="Panier.html"
+          aria-label="Panier"
+          class="panier-lien hover:text-primary-700"
+        >
+          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+          <span class="badge-panier">2</span>
+        </a>
+
+        <!-- Bouton RDV pc (hidden on smaller screens) -->
+        <a
+          href="Services-contact.html"
+          class="btn-rdv-pc"
+        >
+          Prendre RDV
+        </a>
+
+        <!-- Burger : phone seulement -->
+        <button
+          id="burger"
+          class="burger-btn md:hidden cursor-pointer"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
     </nav>
-    <main class="p-8">
-      <h1 class="text-4xl font-extrabold tracking-tight">
-        Welcome to Home Page
-      </h1>
-      <p class="mt-2 text-slate-600">Styled seamlessly with Tailwind CSS!</p>
-    </main>
-    <script src="./js/main.js"></script>
+  </div>
+
+  <!-- Menu tele -->
+  <div id="mobileMenu" class="menu-mobile hidden">
+    <ul class="menu-mobile-list">
+      <li>
+        <a href="Accueil.html" class="menu-mobile-item text-primary-700">
+          Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Botique.html" class="menu-mobile-item">
+          Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Adoption.html" class="menu-mobile-item">
+          Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Services <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Contact <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+    <!-- button tele -->
+    <a href="Services-contact.html" class="btn-rdv-mobile">
+      <input type="button" value="" />
+    </a>
+
+    <!-- icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </div>
+</header>
+
+    <!-- hero -->
+   <section id="accueil" class="hero">
+      <div class="conteneur">
+        
+        <div class="hero-contenu">
+          <div class="hero-texte">
+            <p class="sur-titre"></p>
+            <h1>Tout pour le<br> bonheur de vos<br> animaux</h1>
+            <p class="hero-description">
+             Alimentation, accessoires, adoption responsable et soins : PetNest accompagne chiens, chats, rongeurs, oiseaux et poissons au quotidien.
+            </p>
+            <div class="boutons">
+              <a href="cataloge.html" class="bouton bouton-principal">Découvrir la boutique</a>
+              <a href="Adoption.html" class="bouton bouton-secondaire">Adopter un animal</a>
+            </div>
+          </div>
+          
+          <img class="hero-image" src="src/les-images/accueil img.jpg" alt="Visuel hero 1 / 3">
+        </div>
+        <form class="partie_2">
+          <div class="mini_header">
+            <h1 class="jota">Produits vedettes</h1>
+             <a href="Adoption.html" class="bt-voir_tout">Voir tout</a>
+          </div>
+          
+        </form>
+          
+      </section>
+    <!-- footer -->
+    <footer class="bg-neutral-900 text-neutral-0 pt-10 pb-5">
+      <div class="conteneur">
+        <div class="footer-colonnes">
+          <!-- logo et description -->
+          <div>
+            <h2 class="text-2xl font-bold mb-3">
+              <div >
+                <img src="../les-images/Logo footer.png" alt="page logo" />
+                <!-- <i class="text-primary-500"></i> PetNest -->
+              </div>
+            </h2>
+            <p class="text-sm leading-6 mb-3 max-w-xs">
+              Produits, adoption responsable et services pour le bien-être de
+              vos animaux.
+            </p>
+            <div class="footer-reseaux">
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="footer-reseau w-8 h-8 rounded-full bg-white/10"
+              >
+                <i class="fa-solid fa-share-nodes"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Boutique -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Boutique</h3>
+            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Chiens</a
+            >
+            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Chats</a
+            >
+            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Rongeurs</a
+            >
+            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Oiseaux</a
+            >
+            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Poissons</a
+            >
+          </div>
+
+          <!-- Aide -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Aide</h3>
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >FAQ</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Livraison</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Retours</a
+            >
+            <a href="#" class="block text-sm mb-2.5 hover:text-primary-500"
+              >Conditions générales</a
+            >
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-base font-semibold mb-4">Contact</h3>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              12 rue des Lilas, Casablanca
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              05 22 00 00 00
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              bonjour@petnest.ma
+            </p>
+            <p class="text-sm mb-2.5">
+              <i
+                class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"
+              ></i>
+              Lun - Sam : 9 h - 19 h
+            </p>
+          </div>
+        </div>
+
+        <!-- bas de page -->
+        <div
+          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400"
+        >
+          <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+          <p>
+            <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
+            <a href="#" class="hover:text-neutral-0">Confidentialité</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      burger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("flex");
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        burger.innerHTML = `<ion-icon name="${isOpen ? "close-outline" : "menu-outline"}"></ion-icon>`;
+        burger.setAttribute("aria-expanded", isOpen);
+      });
+    </script>
   </body>
 </html>

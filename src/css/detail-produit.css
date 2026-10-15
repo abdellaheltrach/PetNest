@@ -1,0 +1,85 @@
+.bg-peche {
+  background-color: #FFE4D3;
+}
+
+/* Mobile : 1 colonne */
+.produit-grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Tablette et ordinateur */
+@media (min-width: 768px) {
+  .produit-grille {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+  }
+}
+
+.produit-vues {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Prix et "TTC" */
+.produit-prix {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* Quantité + bouton */
+.produit-achat {
+  display: flex;
+  gap: 12px;
+}
+
+/* Le − 1 + */
+.produit-quantite {
+  display: flex;
+  align-items: center;
+}
+
+/* Icône  + texte */
+.produit-avantage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mobile : 1 colonne */
+.avis-grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* Tablette et ordinateur : avis à gauche, formulaire à droite */
+@media (min-width: 768px) {
+  .avis-grille {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+/* La note 4,8 à côté des étoiles */
+.avis-resume {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Les étoiles sur une ligne */
+.avis-etoiles {
+  display: flex;
+  gap: 2px;
+}
+
+/* Étoiles + nom de l'auteur sur une ligne */
+.avis-entete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

@@ -16,6 +16,8 @@
     <style type="text/tailwind">
       @theme {
         --font-poppins: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
+
         --color-primary-500: #f97316;
       }
     </style>
@@ -30,110 +32,120 @@
   <body>
     <!-- header -->
     <header class="en-tete-principal">
-  <div class="conteneur">
-    <nav class="en-tete-contenu">
-      <!-- Logo -->
-      <a href="/index.html" class="logo-lien">
-        <img
-          src="/src/les-images/Logo.png"
-          alt="PetNest logo"
-          class="logo-img"
-        />
-      </a>
-      <!-- Liens pc -->
-      <ul class="menu-pc">
-        <li>
-          <a href="/index.html" class="hover:text-primary-700">Accueil</a>
-        </li>
-        <li>
-          <a href="./cataloge.html" class="lien-actif hover:text-primary-700">Boutique</a>
-        </li>
-        <li>
-          <a href="./Adoption.html" class="hover:text-primary-700">Adoption</a>
-        </li>
-        <li>
-          <a href="./service.html" class="hover:text-primary-700">Services</a>
-        </li>
-        <li>
-          <a href="./service.html" class="hover:text-primary-700">Contact</a>
-        </li>
-      </ul>
-      <!-- Droite -->
-      <div class="en-tete-droite">
-        <!-- Panier pc + tele -->
-        <a
-          href="Panier.html"
-          aria-label="Panier"
-          class="panier-lien hover:text-primary-700"
-        >
-          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
-          <span class="badge-panier">2</span>
-        </a>
-        <!-- Bouton RDV pc (hidden on smaller screens) -->
-        <a
-          href="Services-contact.html"
-          class="btn-rdv-pc"
-        >
-          Prendre RDV
-        </a>
-        <!-- Burger : phone seulement -->
-        <button
-          id="burger"
-          class="burger-btn md:hidden cursor-pointer"
-          aria-label="Menu"
-          aria-expanded="false"
-        >
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
+      <div class="conteneur">
+        <nav class="en-tete-contenu">
+          <!-- Logo -->
+          <a href="/index.html" class="logo-lien">
+            <img
+              src="/src/les-images/Logo.png"
+              alt="PetNest logo"
+              class="logo-img"
+            />
+          </a>
+
+          <!-- Liens pc -->
+          <ul class="menu-pc">
+            <li>
+              <a href="/index.html" class="hover:text-primary-700">Accueil</a>
+            </li>
+            <li>
+              <a
+                href="/src/html/cataloge.html"
+                class="lien-actif hover:text-primary-700"
+                >Boutique</a
+              >
+            </li>
+            <li>
+              <a href="/src/html/Adoption.html" class="hover:text-primary-700"
+                >Adoption</a
+              >
+            </li>
+            <li>
+              <a href="/src/html/service.html" class="hover:text-primary-700"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="/src/html/service.html" class="hover:text-primary-700"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <!-- Droite -->
+          <div class="en-tete-droite">
+            <!-- Panier pc + tele -->
+            <a
+              href="/src/html/panier.html"
+              aria-label="Panier"
+              class="panier-lien hover:text-primary-700"
+            >
+              <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+              <span class="badge-panier">2</span>
+            </a>
+
+            <!-- Bouton RDV pc (hidden on smaller screens) -->
+            <a href="/src/html/service.html" class="btn-rdv-pc"> Prendre RDV </a>
+
+            <!-- Burger : phone seulement -->
+            <button
+              id="burger"
+              class="burger-btn md:hidden cursor-pointer"
+              aria-label="Menu"
+              aria-expanded="false"
+            >
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-  <!-- Menu tele -->
-  <div id="mobileMenu" class="menu-mobile hidden">
-    <ul class="menu-mobile-list">
-      <li>
-        <a href="Accueil.html" class="menu-mobile-item text-primary-700">
-          Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Botique.html" class="menu-mobile-item">
-          Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Adoption.html" class="menu-mobile-item">
-          Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Services-contact.html" class="menu-mobile-item">
-          Services <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Services-contact.html" class="menu-mobile-item">
-          Contact <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-    </ul>
 
-    <!-- button tele -->
-    <a href="Services-contact.html" class="btn-rdv-mobile">
-      <input type="button" value="" />
-    </a>
+      <!-- Menu tele -->
+      <div id="mobileMenu" class="menu-mobile hidden">
+        <ul class="menu-mobile-list">
+          <li>
+            <a href="Accueil.html" class="menu-mobile-item text-primary-700">
+              Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="Botique.html" class="menu-mobile-item">
+              Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="Adoption.html" class="menu-mobile-item">
+              Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="Services-contact.html" class="menu-mobile-item">
+              Services <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="Services-contact.html" class="menu-mobile-item">
+              Contact <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+          </li>
+        </ul>
 
-    <!-- icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </div>
-</header>
+        <!-- button tele -->
+        <a href="Services-contact.html" class="btn-rdv-mobile">
+          <input type="button" value="" />
+        </a>
+
+        <!-- icons -->
+        <script
+          type="module"
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+          nomodule
+          src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+      </div>
+    </header>
 
     <!-- hero -->
     <div class="hero-conntainer py-[40px] bg-[#FFE4D3]">
@@ -151,20 +163,143 @@
     <!-- main content -->
     <main class="py-8">
       <div class="conteneur main-container">
-        <nav class="border-2 bg-[#FAFAF9] rounded-[20px] p-6">
-          <p class="font-poppins font-semibold mb-4">Animal</p>
-          <ul class="nav-items">
-            <li>Tous</li>
-            <li>Chiens</li>
-            <li>Chats</li>
-            <li>Rongeurs</li>
-            <li>Oiseaux</li>
-            <li>Poissons</li>
-          </ul>
-        </nav>
+        <!-- Sidebar Filter (Hidden on mobile via Tailwind 'hidden md:block') -->
+        <div class="bg-[#FAFAF9] rounded-[20px] p-6 space-y-6">
+          <!-- Animal Filter -->
+          <nav>
+            <p class="font-poppins font-semibold mb-4">Animal</p>
+            <ul class="nav-items">
+              <li class="font-Inter animal-nav active">Tous</li>
+              <li class="font-Inter animal-nav">Chiens</li>
+              <li class="font-Inter animal-nav">Chats</li>
+              <li class="font-Inter animal-nav">Rongeurs</li>
+              <li class="font-Inter animal-nav">Oiseaux</li>
+              <li class="font-Inter animal-nav">Poissons</li>
+            </ul>
+          </nav>
 
-        <div class="border-2 bg-[#FAFAF9] rounded-[20px] p-6">
-          <p class="border-2 p-4">hello</p>
+          <!-- Price Filter -->
+          <div class="price-filter">
+            <p class="font-poppins font-semibold mb-4">Prix</p>
+            <div class="relative flex items-center select-none mb-2">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="75"
+                class="w-full accent-[#D35400] cursor-pointer"
+              />
+            </div>
+
+            <!-- Min / Max labels -->
+            <div class="flex justify-between text-sm text-gray-600 font-Inter">
+              <span>0 €</span>
+              <span>100 €</span>
+            </div>
+
+            <!-- Reset Filters Button -->
+            <div class="pt-4 text-center">
+              <button
+                class="font-poppins font-semibold text-[#D35400] hover:underline cursor-pointer"
+              >
+                Réinitialiser les filtres
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- main header -->
+
+        <div class="space-y-6">
+          <div class="bg-[#FAFAF9] rounded-[20px] p-6">
+            <div class="main-header">
+              <p class="font-inter">6 produits affichés (aria-live)</p>
+
+              <div class="flex flex-col gap-3">
+                <p>Trier par</p>
+                <select class="price-selector">
+                  <option selected="">Prix croissant</option>
+                  <option>Prix décroissant</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- product grid -->
+            <div class="product-grid w-full">
+              <!-- Product 1 -->
+              <div class="product-card my-[24px]">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    alt="Croquettes saumon & riz"
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Croquettes saumon & riz
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 2 (Example for 3 columns) -->
+              <div class="product-card my-[24px]">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    alt="Croquettes saumon & riz"
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Croquettes saumon & riz
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 3 (Example for 3 columns) -->
+              <div class="product-card my-[24px]">
+                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border">
+                  <img
+                    src="../les-images/DogAdoption.jpg"
+                    alt="Croquettes saumon & riz"
+                    class="w-full rounded-t-[20px]"
+                  />
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Croquettes saumon & riz
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end product grid -->
+          </div>
         </div>
       </div>
     </main>
@@ -176,7 +311,7 @@
           <!-- logo et description -->
           <div>
             <h2 class="text-2xl font-bold mb-3">
-              <div >
+              <div>
                 <img src="../les-images/Logo footer.png" alt="page logo" />
                 <!-- <i class="text-primary-500"></i> PetNest -->
               </div>
@@ -210,19 +345,29 @@
           <!-- Boutique -->
           <div>
             <h3 class="text-base font-semibold mb-4">Boutique</h3>
-            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+            <a
+              href="./cataloge.html"
+              class="block text-sm mb-2.5 hover:text-primary-500"
               >Chiens</a
             >
-            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+            <a
+              href="./cataloge.html"
+              class="block text-sm mb-2.5 hover:text-primary-500"
               >Chats</a
             >
-            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+            <a
+              href="./cataloge.html"
+              class="block text-sm mb-2.5 hover:text-primary-500"
               >Rongeurs</a
             >
-            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+            <a
+              href="./cataloge.html"
+              class="block text-sm mb-2.5 hover:text-primary-500"
               >Oiseaux</a
             >
-            <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500"
+            <a
+              href="./cataloge.html"
+              class="block text-sm mb-2.5 hover:text-primary-500"
               >Poissons</a
             >
           </div>
@@ -249,7 +394,8 @@
             <h3 class="text-base font-semibold mb-4">Contact</h3>
             <p class="text-sm mb-2.5">
               <i
-                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"w
+                class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"
+                w
               ></i>
               12 rue des Lilas, Casablanca
             </p>
@@ -274,7 +420,8 @@
           </div>
         </div>
         <div
-          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400">
+          class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400"
+        >
           <p>&copy; 2026 PetNest. Tous droits réservés.</p>
           <p>
             <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
@@ -296,4 +443,3 @@
     </script>
   </body>
 </html>
-

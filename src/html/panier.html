@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panier</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Tailwind Theme & Custom Styles (Placed AFTER script tag) -->
+    <style type="text/tailwind">
+      @theme {
+        --font-poppins: "Poppins", sans-serif;
+        --color-primary-500: #f97316;
+      }
+    </style>
+
+    <!-- External Styles (Fixed relative paths for GitHub Pages) -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="../css/panier.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <body >
+   
+    <header class="en-tete-principal">
+  <div class="conteneur">
+    <nav class="en-tete-contenu">
+      <!-- Logo -->
+      <a href="/index.html" class="logo-lien">
+        <img
+          src="/src/les-images/Logo.png"
+          alt="PetNest logo"
+          class="logo-img"
+        />
+      </a>
+
+      <!-- Liens pc -->
+      <ul class="menu-pc">
+        <li>
+          <a href="/index.html" class="hover:text-primary-700">Accueil</a>
+        </li>
+        <li>
+          <a href="./cataloge.html" class="lien-actif hover:text-primary-700">Boutique</a>
+        </li>
+        <li>
+          <a href="./Adoption.html" class="hover:text-primary-700">Adoption</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Services</a>
+        </li>
+        <li>
+          <a href="./service.html" class="hover:text-primary-700">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Droite -->
+      <div class="en-tete-droite">
+        <!-- Panier pc + tele -->
+        <a
+          href="Panier.html"
+          aria-label="Panier"
+          class="panier-lien hover:text-primary-700"
+        >
+          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
+          <span class="badge-panier">2</span>
+        </a>
+
+        <!-- Bouton RDV pc (hidden on smaller screens) -->
+        <a
+          href="Services-contact.html"
+          class="btn-rdv-pc"
+        >
+          Prendre RDV
+        </a>
+
+        <!-- Burger : phone seulement -->
+        <button
+          id="burger"
+          class="burger-btn md:hidden cursor-pointer"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Menu tele -->
+  <div id="mobileMenu" class="menu-mobile hidden">
+    <ul class="menu-mobile-list">
+      <li>
+        <a href="Accueil.html" class="menu-mobile-item text-primary-700">
+          Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Botique.html" class="menu-mobile-item">
+          Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Adoption.html" class="menu-mobile-item">
+          Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Services <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="Services-contact.html" class="menu-mobile-item">
+          Contact <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+      </li>
+    </ul>
+
+    <!-- button tele -->
+    <a href="Services-contact.html" class="btn-rdv-mobile">
+      <input type="button" value="" />
+    </a>
+
+    <!-- icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </div>
+</header>
+
+  
+
+
+  
+<div class="promo-banner">
+    <div class="promo-track">
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+        <span> - Profitez de -30% sur tout le site ! </span>
+    </div>
+</div>
+
+  
+  
+  
+
+
+   
+
+
+
+    <!-- Main Grid Layout ( with CSS Grid b panier.css) -->
+    <div class="panier-grid">
+
+        <!-- 1. Section Produits Col-span 2 -->
+        <div class="col-products bg-white p-6 rounded-xl border border-gray-200">
+            <p class="text-xs text-gray-500 pb-3 mb-4 border-b">
+                Les articles seront réservés pendant 60 minutes
+            </p>
+
+            <!-- Product Row (Flexbox b panier.css) -->
+            <div class="product-row pb-4 border-b">
+                <div class="product-details">
+                    <img src="/src/les-images/Croquette.webp" class="w-16 h-20 object-cover rounded" alt="Croquette">
+                    <div class="product-text">
+                        <p class="font-bold text-sm">150 MAD</p>
+                        <h1 class="text-lg text-gray-700">Croquettes PetNest Saumon and riz 10 kg</h1>
+                        <p class="text-xs text-gray-400 mt-1"></p> Qté 1</p>
+                    </div>
+                </div>
+                <button class="text-gray-400 font-bold text-lg">×</button>
+    
+            </div>
+
+
+
+
+
+
+           
+            <!-- Sous-total(Flexbox) -->
+            <div class="price-row font-bold text-xs pt-4">
+                <span>SOUS-TOTAL</span>
+                <span>150 MAD</span>
+            </div>
+        </div>
+
+        <!-- 2. Section Total (Col-span 1) -->
+        <div class="total-card bg-white p-6 rounded-xl border border-gray-200">
+            <h2 class="font-bold text-sm border-b pb-2">TOTAL</h2>
+            
+            <div class="price-row text-xs font-bold">
+                <span>Total :</span>
+                <span>150 MAD </span>
+            </div>
+
+            <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded text-xs transition">
+                PAIEMENT
+            </button>
+        </div>
+
+    </div>
+
+
+</body>
+  
+
+
+
+
+
+
+
+
+    <!-- font-poppins now works seamlessly here -->
+     <footer class="bg-neutral-900 text-neutral-0 px-12 pt-10 pb-5">
+
+  <div class="max-w-6xl mx-auto">
+
+    <div class="footer-colonnes">
+
+      <!-- logo et description -->
+      <div>
+        <h2 class="text-2xl font-bold mb-3">
+          <i class="fa-solid fa-paw text-primary-500"></i> PetNest
+        </h2>
+        <p class="text-sm leading-6 mb-3 max-w-xs">
+          Produits, adoption responsable et services pour le bien-être de vos animaux.
+        </p>
+        <div class="footer-reseaux">
+          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Boutique -->
+      <div>
+        <h3 class="text-base font-semibold mb-4" >Boutique</h3>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chiens</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Chats</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Rongeurs</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Oiseaux</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Poissons</a>
+      </div>
+
+      <!-- Aide -->
+      <div>
+        <h3 class="text-base font-semibold mb-4">Aide</h3>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">FAQ</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Livraison</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Retours</a>
+        <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Conditions générales</a>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-base font-semibold mb-4">Contact</h3>
+        <p class="text-sm mb-2.5">
+        <i class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"></i> 12 rue des Lilas, Casablanca
+        </p>
+
+        <p class="text-sm mb-2.5">
+        <i class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"></i> 05 22 00 00 00
+        </p>
+
+        <p class="text-sm mb-2.5">
+        <i class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"></i> bonjour@petnest.ma
+        </p>
+
+        <p class="text-sm mb-2.5">
+        <i class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"></i> Lun - Sam : 9 h - 19 h
+        </p>
+      </div>
+    </div>
+
+    <!-- bas de page -->
+      <div class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400">
+        <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+        <p>
+          <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
+          <a href="#" class="hover:text-neutral-0">Confidentialité</a>
+        </p>
+      </div>
+
+
+</footer>
+  </body>
+</html>

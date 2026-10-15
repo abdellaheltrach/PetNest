@@ -220,7 +220,7 @@ img {
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid #E5E7EB;
-  box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);v
+  box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);
 }
 .bouton-secondaire {
   background-color: #FFFFFF;
@@ -325,35 +325,51 @@ img {
   }
   
 }
-.mini_header{
- border-radius: 8px;
-}
-.mini_header .jota{
-  display: flex;
-  justify-content: flex-start;
-  gap:24px;
-}
-.mini_header .bt-voir_tout{
-  display: flex;
-  justify-content: flex-end;
-}
 
+
+.mini_header {
+  display: flex;
+  justify-content: space-between;
+
+}
 .jota{
-  font-size: 30px;
   font-weight: 600;
-  font:Poppins;
-  
-  
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  color:#1C1917;
+
 }
 .bt-voir_tout{
-  color:#C2410C;
-  position: absolute;
-  bottom:10px;
-  left:70rem
-
-
-
+ font-weight: 600px;
+ font-size: 16px;
+ line-height: 24px;
+ letter-spacing: 0%;
+ color: #C2410C;
+ font-family: 'Poppins', sans-serif;
+ text-transform: uppercase;
+ 
 }
-@media {
-  
+.partie2{
+  display: grid;
+  grid-template-rows: 25%,25%,25%,25%;
+  gap: 24px;
+}
+.photo{
+  width: 250px;
+  height: 220px;
+}
+.sir{
+  display: flex;
+  justify-content: space-between;
+}
+.bottub-Ajouter{
+  color:white;
+  background-color: #C2410C;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 8px;
+ border-radius: 12px;
 }

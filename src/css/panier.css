@@ -1,0 +1,131 @@
+
+
+/*Main Grid Layout*/
+
+
+
+.panier-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px;
+}
+
+/* box of products */
+.col-products {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+
+
+
+/*Mobile Responsive */
+
+@media (max-width: 768px) {
+    .panier-grid {
+        grid-template-columns: 1fr; /* كيرجع عمود واحد غير ف التليفون */
+    }
+}
+
+
+
+
+
+
+
+.product-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+
+.product-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+   
+ 
+.product-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+}
+
+
+.total-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:16px ;
+}
+
+/* Sous-total */
+.price-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* Promo Banner Animation */
+
+
+
+
+.promo-banner {
+    background-color: #dc2626; 
+    color: #ffffff;
+    width: 100%;
+   overflow: hidden; /* bloq scrollbar */
+  
+    padding: 10px; 
+    
+    font-weight: bold;
+
+}
+
+.promo-track {
+    display : flex;
+    white-space: nowrap;
+    animation: moveMarquee 15s linear infinite;
+}
+
+.promo-track span {
+
+    padding-right: 50px; /* the space between two phrases*/
+}
+
+
+
+
+
+
+/* the act of tduz mn limn l lissr*/
+
+@keyframes moveMarquee {
+    0% {
+        transform: translateX1(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

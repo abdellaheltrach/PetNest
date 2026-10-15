@@ -130,7 +130,7 @@
 
 @media (min-width: 768px) {
   .menu-mobile {
-    display: none !important;
+    display: none ;
   }
 }
 

@@ -13,7 +13,6 @@
       --color-neutral-900: #1c1917;
     }
   </style>
-  <link rel="stylesheet" href="/src/css/Adoption.css">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/src/css/detail-produit.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -21,116 +20,67 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-    <header class="en-tete-principal">
-    <div class="conteneur">
-    <nav class="en-tete-contenu">
-      <!-- Logo -->
-      <a href="/index.html" class="logo-lien">
-        <img
-          src="/src/les-images/Logo.png"
-          alt="PetNest logo"
-          class="logo-img"
-        />
-      </a>
-      <!-- Liens pc -->
-      <ul class="menu-pc">
-        <li>
-          <a href="/index.html" class="hover:text-primary-700">Accueil</a>
-        </li>
-        <li>
-          <a href="./cataloge.html" class="lien-actif hover:text-primary-700">Boutique</a>
-        </li>
-        <li>
-          <a href="./Adoption.html" class="hover:text-primary-700">Adoption</a>
-        </li>
-        <li>
-          <a href="./service.html" class="hover:text-primary-700">Services</a>
-        </li>
-        <li>
-          <a href="./service.html" class="hover:text-primary-700">Contact</a>
-        </li>
-      </ul>
+     <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
+        <nav class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="/index.html" class="flex items-center gap-2">
+            <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto" />
+          </a>
 
-      <!-- Droite -->
-      <div class="en-tete-droite">
-        <!-- Panier pc + tele -->
-        <a
-          href="Panier.html"
-          aria-label="Panier"
-          class="panier-lien hover:text-primary-700"
-        >
-          <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
-          <span class="badge-panier">2</span>
-        </a>
+          <!-- Liens Desktop -->
+          <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+            <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
+            <li><a href="./Boutique.html" aria-current="page" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">Boutique</a></li>
+            <li>
+              <a href="./Adoption.html" class="hover: text-orange-600 transition">
+                Adoption
+              </a>
+            </li>
+            <li><a href="./Services.html" class="hover:text-orange-600 transition">Services</a></li>
+            <li><a href="./Contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+          </ul>
 
-        <!-- Bouton RDV pc (hidden on smaller screens) -->
-        <a
-          href="Services-contact.html"
-          class="btn-rdv-pc"
-        >
+          <!-- Action Droite -->
+          <div class="flex items-center space-x-4">
+            <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
+              <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
+              <span class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                2
+              </span>
+            </a>
+
+            <a
+              href="Services-contact.html"
+              class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
+            >
+              Prendre RDV
+            </a>
+
+            <!-- Burger Menu Button -->
+            <button
+              id="burger"
+              class="md:hidden text-2xl text-gray-700 focus:outline-none"
+              aria-label="Menu"
+              aria-expanded="false"
+            >
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
+        <a href="index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Boutique.html" class="flex justify-between items-center py-2 text-orange-600 font-semibold">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
+  <a href="Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Services.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Contact.html" class="flex justify-between items-center py-2 font-medium">Contact <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Services-contact.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
           Prendre RDV
         </a>
-
-        <!-- Burger : phone seulement -->
-        <button
-          id="burger"
-          class="burger-btn md:hidden cursor-pointer"
-          aria-label="Menu"
-          aria-expanded="false"
-        >
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
       </div>
-    </nav>
-  </div>
-
-  <!-- Menu tele -->
-  <div id="mobileMenu" class="menu-mobile hidden">
-    <ul class="menu-mobile-list">
-      <li>
-        <a href="Accueil.html" class="menu-mobile-item text-primary-700">
-          Accueil <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Botique.html" class="menu-mobile-item">
-          Boutique <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Adoption.html" class="menu-mobile-item">
-          Adoption <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Services-contact.html" class="menu-mobile-item">
-          Services <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a href="Services-contact.html" class="menu-mobile-item">
-          Contact <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-      </li>
-    </ul>
-
-    <!-- button tele -->
-    <a href="Services-contact.html" class="btn-rdv-mobile">
-      <input type="button" value="" />
-    </a>
-
-    <!-- icons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </div>
     </header>
-
   <main>
     <section class="produit-grille max-w-6xl mx-auto px-4 py-6 md:px-8 lg:px-12">
 

@@ -1,96 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adoption - PetNest</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="../css/Adoption.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="../css/Adoption.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwind">
       @theme {
         --font-poppins: "Poppins", sans-serif;
-        --color-primary-500: #f97316;
-        --color-neutral-0: #ffffff;
-        --color-neutral-400: #a8a29e;
-        --color-neutral-900: #1c1917;
-        --color-secondary: #F0FDFA;
-       } 
+        --color-primary-500: #ea580c;
+        --color-primary-700: #c2410c;
+      }
     </style>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
-<header class="bg-white shadow-sm">
-  <nav class="flex items-center justify-between p-4">
-    <img src="../les-images/logopetnest.jpg" alt="PetNest logo" class="w-24 md:w-32">
-    <ul class="hidden md:flex items-center gap-6">
-      <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
-      <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
-      <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
-      <li><a href="Services.html" class="hover:text-gray-500">Services</a></li>
-      <li><a href="contact.html" class="hover:text-gray-500">contact</a></li>
-    </ul>
-    <div class="flex items-center gap-4">
-      <a href="Panier.html" aria-label="Panier">
-        <ion-icon name="cart-outline" class="text-2xl"></ion-icon>
-      </a>
-      <button id="burger" class="text-3xl md:hidden" aria-label="Menu" aria-expanded="false">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-    </div>
-  </nav>
-  <ul id="mobileMenu" class="hidden flex-col gap-4 p-5 border-t md:hidden">
-    <li><a href="Accueil.html" class="hover:text-gray-500">Accueil</a></li>
-    <li><a href="Botique.html" class="hover:text-gray-500">Boutique</a></li>
-    <li><a href="Adoption.html" class="hover:text-gray-500">Adoption</a></li>
-    <li><a href="Services-contact.html" class="hover:text-gray-500">Services-contact</a></li>
-    <li><a href="Panier.html" class="hover:text-gray-500">Panier</a></li>
-  </ul>
-</header>
+  </head>
+  <body class="font-['Poppins',sans-serif] bg-white text-gray-800">
+    <!-- Header -->
+    <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
+        <nav class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="/index.html" class="flex items-center gap-2">
+            <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto" />
+          </a>
 
-<script>
-  const burger = document.getElementById("burger");
-  const mobileMenu = document.getElementById("mobileMenu");
-  burger.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex");
-    const isOpen = !mobileMenu.classList.contains("hidden");
-    burger.innerHTML = isOpen ? '<ion-icon name="close-outline"></ion-icon>' : '<ion-icon name="menu-outline"></ion-icon>';
-    burger.setAttribute("aria-expanded", isOpen);
-  });
-</script>
-<section class="w-full bg-secondary/50 bg-[#F0FDFA] py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12">
-    <div class="max-w-xl">
-      <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-        Adopter, c'est un engagement pour la vie
-      </h2>
-      <p class="text-gray-600 text-base md:text-lg">
-        Tous nos animaux sont vaccinés, identifiés et suivis par un vétérinaire. Notre équipe vous accompagne avant et après l'adoption.
-      </p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full lg:w-auto">
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
-        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">48</span>
-        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">animaux à adopter</span>
+          <!-- Liens Desktop -->
+          <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
+            <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
+            <li><a href="./Boutique.html" class="hover:text-orange-600 transition">Boutique</a></li>
+            <li>
+              <a href="./Adoption.html" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">
+                Adoption
+              </a>
+            </li>
+            <li><a href="./Services.html" class="hover:text-orange-600 transition">Services</a></li>
+            <li><a href="./Contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+          </ul>
+
+          <!-- Action Droite -->
+          <div class="flex items-center space-x-4">
+            <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
+              <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
+              <span class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                2
+              </span>
+            </a>
+
+            <a
+              href="Services-contact.html"
+              class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
+            >
+              Prendre RDV
+            </a>
+
+            <!-- Burger Menu Button -->
+            <button
+              id="burger"
+              class="md:hidden text-2xl text-gray-700 focus:outline-none"
+              aria-label="Menu"
+              aria-expanded="false"
+            >
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+        </nav>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
-        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">312</span>
-        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">adoptions en 2025</span>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
+        <a href="index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Boutique.html" class="flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Adoption.html" class="flex justify-between items-center py-2 text-orange-600 font-semibold">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Services.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Contact.html" class="flex justify-between items-center py-2 font-medium">Contact <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="Services-contact.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
+          Prendre RDV
+        </a>
       </div>
-      <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] text-left min-w-[140px]">
-        <span class="block text-3xl md:text-4xl font-bold text-teal-600 mb-1">100%</span>
-        <span class="text-xs md:text-sm text-gray-500 font-medium leading-snug">vaccinés et identifiés</span>
+    </header>
+
+    <!-- Banner / Stats Section -->
+    <section class="w-full bg-[#F0FDFA] py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+          <div class="max-w-xl">
+            <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-gray-900 leading-[1.15] mb-4">
+              Adopter, c'est un engagement pour la vie
+            </h1>
+            <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+              Tous nos animaux sont vaccinés, identifiés et suivis par un vétérinaire. Notre équipe vous accompagne avant et après l'adoption.
+            </p>
+          </div>
+
+          <!-- Cards Stats -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 w-full lg:w-auto">
+            <div class="bg-white p-6 rounded-2xl border border-teal-100/60 shadow-sm text-left min-w-[150px]">
+              <span class="block text-3xl md:text-4xl font-bold text-teal-700 mb-1">48</span>
+              <span class="text-xs md:text-sm text-gray-500 font-medium">animaux à adopter</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-teal-100/60 shadow-sm text-left min-w-[150px]">
+              <span class="block text-3xl md:text-4xl font-bold text-teal-700 mb-1">312</span>
+              <span class="text-xs md:text-sm text-gray-500 font-medium">adoptions en 2025</span>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-teal-100/60 shadow-sm text-left min-w-[150px]">
+              <span class="block text-3xl md:text-4xl font-bold text-teal-700 mb-1">100 %</span>
+              <span class="text-xs md:text-sm text-gray-500 font-medium">vaccinés et identifiés</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 <section class="section2">
-  <div class="photoRocky"> 
+  <div class="photoRocky">
     <img src="../les-images/DogAdoption.jpg" alt="Photo de Rocky">
   </div>
   <div class="content-wrapper">
@@ -102,5 +142,122 @@
     </div>
   </div>
 </section>
-</body>
+   <section class="section3">
+  <div class="adoption-wrapper">
+    <div class="form-intro">
+      <p class="subtitle">FORMULAIRE</p>
+      <h2>Demande d'adoption</h2>
+      <p class="description">Notre équipe vous recontacte sous 48 h pour organiser une rencontre avec l'animal. Les champs marqués * sont obligatoires.</p>
+    </div>
+    <div class="form-card">
+      <form class="formulaire">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" placeholder="Sara Benali">
+          </div>
+          <div class="form-group">
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" placeholder="sara.benali@">
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone *</label>
+            <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
+          </div>
+          <div class="form-group">
+            <label for="animal">Animal choisi *</label>
+            <select id="animal" name="animal">
+              <option value="Rocky-chien,4ans">Rocky — chien, 4 ans</option>
+              <option value="lucas-cat,2ans">Lucas — chat, 2 ans</option>
+              <option value="simba-cat,1an">Simba — chat, 1 an</option>
+            </select>  
+          </div>
+          <div class="form-group full-width">
+            <label for="logement">Type de logement *</label>
+            <select id="logement" name="type-de-logement">
+              <option value="maison avec jardin">Maison avec jardin</option>
+              <option value="maison normal">Maison normale</option>
+              <option value="appartement">Appartement</option>
+            </select>  
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" placeholder="Parlez-nous de votre foyer et de votre rythme de vie..."></textarea>
+          </div>
+        </div>
+        <div class="form-group-checkbox">
+          <input type="checkbox" id="acceptation" name="acceptation">
+          <label for="acceptation">J'accepte d'être recontacté(e) au sujet de ma demande. *</label>
+        </div>
+        <div class="form-action">
+          <button type="submit">Envoyer ma demande</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white pt-12 pb-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <img src="../les-images/Logo footer.png" alt="PetNest logo" class="h-8 mb-4" />
+            <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+              Produits, adoption responsable et services pour le bien-être de vos animaux.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Boutique</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li><a href="./Boutique.html" class="hover:text-white transition">Chiens</a></li>
+              <li><a href="./Boutique.html" class="hover:text-white transition">Chats</a></li>
+              <li><a href="./Boutique.html" class="hover:text-white transition">Rongeurs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Aide</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+              <li><a href="#" class="hover:text-white transition">Livraison</a></li>
+              <li><a href="#" class="hover:text-white transition">Retours</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Contact</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-orange-500"></i> 12 rue des Lilas, Casablanca</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-orange-500"></i> 05 22 00 00 00</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-orange-500"></i> bonjour@petnest.ma</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-400">
+          <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+          <div class="space-x-4 mt-2 sm:mt-0">
+            <a href="#" class="hover:text-white">Mentions légales</a>
+            <a href="#" class="hover:text-white">Confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script Menu Burger -->
+    <script>
+      const burger = document.getElementById("burger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      burger.addEventListener("click", function () {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", !isHidden);
+        mobileMenu.classList.toggle("flex", isHidden);
+        burger.innerHTML = isHidden
+          ? '<ion-icon name="close-outline"></ion-icon>'
+          : '<ion-icon name="menu-outline"></ion-icon>';
+        burger.setAttribute("aria-expanded", isHidden);
+      });
+    </script>
+  </body>
 </html>

@@ -78,6 +78,14 @@
   gap: 0.5rem;
 }
 
+.btn-inactive {
+  background-color: #E7E5E4;
+  color: #E7E5E4;
+  color: #A8A29E;
+  cursor: not-allowed;
+
+}
+
 @media (max-width: 1000px) {
   .product-grid {
     grid-template-columns: 1fr 1fr;
@@ -121,4 +129,10 @@
   max-width: 100%;
   width: 100%;  
 }
+
+
+.hide-phone{
+  display: none;
+}
+
 }

@@ -1,0 +1,382 @@
+/* header */
+.conteneur {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 48px;  /* matches px-12 */
+  padding-right: 48px;
+}
+
+
+/* Header Grid / Flex */
+.en-tete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+/* Hero Section */
+.hero-conntainer {
+  padding-left:48px;
+  padding-right:48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+.en-tete-principal {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+.en-tete-contenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem; /* h-20 */
+}
+.logo-lien {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 2.25rem; /* h-9 */
+  width: auto;
+  display: block;
+}
+
+/* PC Navigation Menu */
+.menu-pc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .menu-pc {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* gap-8 */
+    font-size: 0.875rem;
+  }
+}
+
+/* Right Header Actions Group */
+.en-tete-droite {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.panier-lien {
+  position: relative;
+}
+
+.badge-panier {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  display: flex;
+  height: 1rem;
+  width: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: #dc2626;
+  font-size: 10px;
+  color: white;
+}
+
+/* Desktop "Prendre RDV" button (hidden on smaller screens) */
+.btn-rdv-pc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .btn-rdv-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-radius: 0.5rem;
+    background-color: #f97316;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .btn-rdv-pc:hover {
+    background-color: #ea580c;
+  }
+}
+
+.burger-btn {
+  font-size: 1.875rem;
+  line-height: 1;
+}
+
+/* Mobile Dropdown Menu */
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .menu-mobile {
+    display: none ;
+  }
+}
+
+.menu-mobile-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-mobile-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.btn-rdv-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #f97316;
+  color: white;
+  font-weight: 600;
+}
+/* footer */
+footer {
+  background-color: #1c1917;
+  color: #FFFFFF;
+}
+/* Les 4 colonnes : grid */
+.footer-colonnes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer-colonnes {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+/* Les icônes des réseaux sociaux : flex */
+.footer-reseaux {
+  display: flex;
+  gap: 8px;
+}
+
+/* Un cercle de réseau social : flex pour centrer l'icône */
+.footer-reseau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Le bas de page : flex */
+.footer-bas {
+  display: flex;
+  flex-direction: column;           
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .footer-bas {
+    flex-direction: row;            
+    justify-content: space-between;
+  }}
+/* lien active */
+
+.lien-actif {
+  color: #EA580C;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-primary-500,#C2410C);
+  padding-bottom: 4px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.hero-image {
+  flex: 5;
+  min-width: 0;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 10px 25px rgba(15, 27, 45, 0.15);
+}
+.bouton-secondaire {
+  background-color: #FFFFFF;
+  border:2px solid #C2410C;
+  color: #C2410C
+}
+
+.bouton-secondaire:hover {
+  background-color: #F3F4F6;
+}
+.bouton-principal {
+  background-color: #FF6B2C;
+  border: none #FF6B2C;
+  color: #FFFFFF;
+}
+
+.bouton-principal:hover {
+  background-color: #F05817;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.boutons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.hero-description {
+  max-width: 570px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4B5563;
+  margin-bottom: 32px;
+}
+h1, h2, h4 {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #0F1B2D;
+}
+
+.hero-texte h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.hero-contenu {
+  display: flex;
+  align-items: center;
+  gap:64px;
+  padding-top: 20px;
+  padding-bottom:120px;
+  padding-left:80px ;
+  padding-right:80px;
+}
+
+.hero-texte {
+  flex: 7;
+}
+
+.hero-image {
+  flex: 5;
+  min-width: 0;
+  max-width: 560px;
+  height: 440px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .hero-contenu{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    max-width: 375px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 50px;
+    padding-right: 40px;
+  }
+  .bouton{
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px;
+   
+  }
+  .hero-image{
+    width: 343px;
+   
+    border-radius: 24px;
+    gap: 8px;
+
+  }
+  
+}
+.mini_header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 30px;
+  align-items: center;
+
+}
+.jota{
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Poppins', sans-serif;
+  color:#1C1917;
+
+}
+.bt-voir_tout{
+ font-weight: 600px;
+ font-size: 16px;
+ line-height: 24px;
+ letter-spacing: 0%;
+ color: #C2410C;
+ font-family: 'Poppins', sans-serif;
+ text-transform: uppercase;
+ 
+}
+.abb{
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1px;
+}
+.photo{
+  width: 250px;
+  height: 220px;
+}
+.sir{
+  display: flex;
+  justify-content: space-between;
+}
+.bottub-Ajouter{
+  color:white;
+  background-color: #C2410C;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  gap: 8px;
+ border-radius: 12px;
+}

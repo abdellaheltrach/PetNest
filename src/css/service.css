@@ -1,11 +1,12 @@
-.section-hero{
+.section-pr{
   background-color:#FFF4ED;
   width: 100%;
   padding: 30px;
 }
-.conteneur{
-  margin-top: 50px;
+.conteneur{ 
+  margin-top: 40px;
   margin-left:100px;
+  padding-right: 100px;
 }
 .conteneur h2{
   font-family: Arial, Helvetica, sans-serif ;
@@ -30,9 +31,107 @@
     flex-direction: column;
   }
   .conteneur{
-    margin: 0 auto;
-    font: size 8px; ;
-    font-weight: 90PX;
+    margin: 0 ;
+    padding: 0;
 
+  }
+}
+.section-faq{
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px ;
+  box-sizing: border-box;
+}
+.conteneur-faq{
+  padding-left: 100px;
+  width: 35%;
+}
+.conteneur-faq .faq-label{
+  display: block;
+  font-family: 'Inter', sans-serif ;
+  font-weight: 16px;
+  font-size: 12px;
+  color: #C2410C;
+}
+
+.conteneur-faq h2{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color:#1C1917
+}
+.conteneur-faq p{
+  font-family: 'Inter',sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color:#57534E
+}
+.faq-button {
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #C2410C;
+   width: 130px;
+  height: 42px;
+  padding: 8px 20px;
+  font-family: 'Inter',sans-serif;
+  font-weight: 450;
+  font-size: 15px;
+  color: #C2410C;
+}
+.faq-button:hover{
+  background-color: #C2410C;
+  color: white;
+}
+.faq-list {
+  width: 64%;
+
+}
+.faq-item {
+  width: 85%;
+  background-color: white;
+  border: 1px solid #E7E5E4;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.faq-item summary {
+  color: #292524;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-item summary::after {
+  content: "⌄";
+  color: #292524;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
+.faq-item[open] summary::after {
+  content: "^";
+}
+.faq-item p {
+  color: #57534E;
+  font-family: 'Inter',sans-serif;
+  font-size: 16px;
+  padding: 0 11px 8px;
+}
+@media (max-width: 768px) {
+  .section-faq{
+    flex-direction: column;
+  }
+  .conteneur-faq,
+  .faq-list {
+    margin: 0 ;
+    padding: 0;
+  }
+  .conteneur-faq h2 {
+    font-size: 28px;
+  }
+  .faq-item summary {
+    font-size: 15px;
   }
 }

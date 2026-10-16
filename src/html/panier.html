@@ -173,10 +173,27 @@
         </a>
       </div>
     </header>
-  
 
 
+
+
+
+
+
+
+
+
+
   
+
+  <!-- banner d promotion -->
+
+
+
+
+
+
+
 <div class="promo-banner">
     <div class="promo-track">
         <span> - Profitez de -30% sur tout le site ! </span>
@@ -190,6 +207,9 @@
     </div>
 </div>
 
+
+
+
   
   
   
@@ -202,26 +222,37 @@
     <!-- Main Grid Layout ( with CSS Grid b panier.css) -->
     <div class="panier-grid">
 
-        <!-- 1. Section Produits Col-span 2 -->
+        <!--  Section Produits  -->
         <div class="col-products bg-white p-6 rounded-xl border border-gray-200">
             <p class="text-xs text-gray-500 pb-3 mb-4 border-b">
                 Les articles seront réservés pendant 60 minutes
             </p>
 
-            <!-- Product Row (Flexbox b panier.css) -->
-            <div class="product-row pb-4 border-b">
-                <div class="product-details">
-                    <img src="/src/les-images/Croquette.webp" class="w-16 h-20 object-cover rounded" alt="Croquette">
-                    <div class="product-text">
-                        <p class="font-bold text-sm">150 MAD</p>
-                        <h1 class="text-lg text-gray-700">Croquettes PetNest Saumon and riz 10 kg</h1>
-                        <p class="text-xs text-gray-400 mt-1"></p> Qté 1</p>
-                    </div>
+            <!-- First Product Row -->
+        <div class="product-row pb-4 border-b">
+            <div class="product-details">
+                <img src="/src/les-images/Croquette.webp" class="w-16 h-20 object-cover rounded" alt="Croquette pour pets yum yum !!">
+                <div class="product-text">
+                    <p class="font-bold text-sm">49,90 €</p>
+                    <h1 class="text-lg text-gray-700">Croquettes PetNest Saumon and riz 10 kg</h1>
+                    <p class="text-xs text-gray-400 mt-1">Qté 1</p>
                 </div>
-                <button class="text-gray-400 font-bold text-lg">×</button>
-    
             </div>
+            <button class="text-gray-400 font-bold text-lg">×</button>
+        </div>
 
+        <!-- Second Product Row  -->
+        <div class="product-row pb-4 border-b mt-4">
+            <div class="product-details">
+                <img src="/src/les-images/Balles lumineuses x2.jpeg" class="w-16 h-20 object-cover rounded" alt="Balles lumineuses pour pets houf houf !!">
+                <div class="product-text">
+                    <p class="font-bold text-sm">29,99 €</p>
+                    <h1 class="text-lg text-gray-700">Balles lumineuses x2</h1>
+                    <p class="text-xs text-gray-400 mt-1">Qté 1</p>
+                </div>
+            </div>
+            <button class="text-gray-400 font-bold text-lg">×</button>
+        </div>
 
 
 
@@ -231,19 +262,30 @@
             <!-- Sous-total(Flexbox) -->
             <div class="price-row font-bold text-xs pt-4">
                 <span>SOUS-TOTAL</span>
-                <span>150 MAD</span>
+                <span>79.89 € </span>
             </div>
+            
+            <div class="price-row text-xs font-bold pb-3 border-b flex justify-between">
+        <span class="text-gray-600">Livraison :</span>
+        <span class="text-emerald-600">20 €</span>
         </div>
 
-        <!-- 2. Section Total (Col-span 1) -->
+
+        </div>
+
+        
+
+        <!-- 2. Section Total  -->
         <div class="total-card bg-white p-6 rounded-xl border border-gray-200">
             <h2 class="font-bold text-sm border-b pb-2">TOTAL</h2>
             
             <div class="price-row text-xs font-bold">
                 <span>Total :</span>
-                <span>150 MAD </span>
+            
+                <span>99.89 €</span>
             </div>
 
+           
             <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded text-xs transition">
                 PAIEMENT
             </button>

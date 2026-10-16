@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adoption - PetNest</title>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="../css/Adoption.css">
@@ -13,7 +12,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwind">
@@ -23,16 +21,15 @@
         --color-primary-700: #c2410c;
       }
     </style>
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
     <!-- Ionicons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
   </head>
   <body class="font-['Poppins',sans-serif] bg-white text-gray-800">
     <!-- Header -->
@@ -43,20 +40,18 @@
           <a href="/index.html" class="flex items-center gap-2">
             <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto" />
           </a>
-
           <!-- Liens Desktop -->
           <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
             <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
-            <li><a href="./Boutique.html" class="hover:text-orange-600 transition">Boutique</a></li>
+            <li><a href="./cataloge.html" class="hover:text-orange-600 transition">Boutique</a></li>
             <li>
               <a href="./Adoption.html" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">
                 Adoption
               </a>
             </li>
-            <li><a href="./Services.html" class="hover:text-orange-600 transition">Services</a></li>
-            <li><a href="./Contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+            <li><a href="./service.html" class="hover:text-orange-600 transition">Services</a></li>
+            <li><a href="./#service" class="hover:text-orange-600 transition">Contact</a></li>
           </ul>
-
           <!-- Action Droite -->
           <div class="flex items-center space-x-4">
             <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
@@ -65,14 +60,12 @@
                 2
               </span>
             </a>
-
             <a
               href="Services-contact.html"
               class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
             >
               Prendre RDV
             </a>
-
             <!-- Burger Menu Button -->
             <button
               id="burger"
@@ -97,7 +90,6 @@
         </a>
       </div>
     </header>
-
     <!-- Banner / Stats Section -->
     <section class="w-full bg-[#F0FDFA] py-12 md:py-16">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -110,7 +102,6 @@
               Tous nos animaux sont vaccinés, identifiés et suivis par un vétérinaire. Notre équipe vous accompagne avant et après l'adoption.
             </p>
           </div>
-
           <!-- Cards Stats -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 w-full lg:w-auto">
             <div class="bg-white p-6 rounded-2xl border border-teal-100/60 shadow-sm text-left min-w-[150px]">
@@ -150,27 +141,32 @@
       <p class="description">Notre équipe vous recontacte sous 48 h pour organiser une rencontre avec l'animal. Les champs marqués * sont obligatoires.</p>
     </div>
     <div class="form-card">
-      <form class="formulaire">
+      <form class="formulaire" id="formAdoption" novalidate>
         <div class="form-grid">
           <div class="form-group">
             <label for="nom">Nom complet *</label>
-            <input type="text" id="nom" name="nom" placeholder="Sara Benali">
+            <input type="text" id="nom" name="nom" placeholder="Sara Benali" required>
+            <span class="erreur" id="erreur-nom"></span>
           </div>
           <div class="form-group">
             <label for="email">Adresse e-mail *</label>
-            <input type="email" id="email" name="email" placeholder="sara.benali@">
+            <input type="email" id="email" name="email" placeholder="sara.benali@" required>
+            <span class="erreur" id="erreur-email"></span>
           </div>
           <div class="form-group">
             <label for="telephone">Téléphone *</label>
-            <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78">
+            <input type="tel" id="telephone" name="Telephone" placeholder="06 12 34 56 78" required>
+            <span class="erreur" id="erreur-telephone"></span>
           </div>
           <div class="form-group">
             <label for="animal">Animal choisi *</label>
             <select id="animal" name="animal">
+              <option value="">Choisir un animal</option>
               <option value="Rocky-chien,4ans">Rocky — chien, 4 ans</option>
               <option value="lucas-cat,2ans">Lucas — chat, 2 ans</option>
               <option value="simba-cat,1an">Simba — chat, 1 an</option>
-            </select>  
+            </select>
+            <span class="erreur" id="erreur-animal"></span>
           </div>
           <div class="form-group full-width">
             <label for="logement">Type de logement *</label>
@@ -178,7 +174,8 @@
               <option value="maison avec jardin">Maison avec jardin</option>
               <option value="maison normal">Maison normale</option>
               <option value="appartement">Appartement</option>
-            </select>  
+            </select>
+            <span class="erreur" id="erreur-logement"></span>
           </div>
           <div class="form-group full-width">
             <label for="message">Votre message</label>
@@ -186,12 +183,14 @@
           </div>
         </div>
         <div class="form-group-checkbox">
-          <input type="checkbox" id="acceptation" name="acceptation">
+          <input type="checkbox" id="acceptation" name="acceptation" required>
           <label for="acceptation">J'accepte d'être recontacté(e) au sujet de ma demande. *</label>
+          <span class="erreur" id="erreur-acceptation"></span>
         </div>
         <div class="form-action">
           <button type="submit">Envoyer ma demande</button>
         </div>
+        <p id="confirmation" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>

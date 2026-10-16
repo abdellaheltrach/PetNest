@@ -326,7 +326,14 @@ img {
     gap: 8px;
 
   }
-  
+  .abb{
+    display: flex;
+    flex-direction: column;
+  }
+  .mini_header{
+    display: flex;
+    flex-direction: column;
+  }
 }
 .mini_header {
   display: flex;
@@ -379,4 +386,33 @@ img {
   padding-right: 16px;
   gap: 8px;
  border-radius: 12px;
+}
+.final .title{
+   display: flex;
+   font-family:Poppins;
+   font-size:32px;
+   font-weight: 600px;
+  
+  justify-content: center;
+}
+.mini_header2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 40px;
+
+}
+.derneir {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.derneir article{
+  border-radius: 12px;
+  background-color: #F5F5F4;
+  border:1px,solid,#e5e7eb;
 }

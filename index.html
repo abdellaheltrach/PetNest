@@ -36,25 +36,25 @@
   </head>
   <body>
     <!-- header -->
-    <!-- header -->
     <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <nav class="flex items-center justify-between">
           <!-- Logo -->
-          <a href="/index.html" class="flex items-center gap-2">
+          <a href="#index" class="flex items-center gap-2">
             <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto" />
           </a>
-
+      
           <!-- Liens Desktop -->
           <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-            <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
-            <li><a href="/src/html/cataloge.html" class="lien-actif transition">Boutique</a></li>
+            <li><a href="#index" class="hover:text-orange-600 transition lien-actif ">Accueil</a></li>
+            <li><a href="/src/html/cataloge.html" class="hover:text-orange-600 transition">Boutique</a></li>
             <li>
               <a href="/src/html/Adoption.html" class="hover:text-orange-600 transition">
                 Adoption
               </a>
             </li>
-            <li><a href="/src/html/service.html" class="hover:text-orange-600 transition">Services et Contact</a></li>
+            <li><a href="/src/html/service.html" class="hover:text-orange-600 transition">Services </a></li>
+             <li><a href="/src/html/contact.html" class="hover:text-orange-600 transition">contact </a></li>
           </ul>
 
           <!-- Action Droite -->
@@ -67,7 +67,7 @@
             </a>
 
             <a
-              href="/src/html/service.html"
+              href="/src/html/contact.html"
               class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
             >
               Prendre RDV
@@ -87,19 +87,19 @@
       </div>
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
-        <a href="/index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/cataloge.html" class="lien-actif flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/index.html" class="lien-actif flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/cataloge.html" class=" flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
         <a href="/src/html/Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
         <a href="/src/html/service.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/service.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
+        <a href="src/html/contact.html" class="flex justify-between items-center py-2 font-medium">contact <ion-icon name ="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/contact.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
           Prendre RDV
         </a>
       </div>
     </header>
+
     <!-- hero -->
-   <section id="accueil" class="hero">
-      <!-- <!<div class="conteneur"> --> 
-        
+    <section id="accueil" class="hero">
         <div class="hero-contenu">
           <div class="hero-texte">
             <p class="sur-titre"></p>
@@ -108,90 +108,162 @@
               Alimentation, accessoires, adoption responsable et soins : PetNest accompagne chiens, chats, rongeurs, oiseaux et poissons au quotidien.
             </p>
             <div class="boutons">
-              <a href="cataloge.html" class="bouton bouton-principal">Découvrir la boutique</a>
-              <a href="Adoption.html" class="bouton bouton-secondaire">Adopter un animal</a>
+              <a href="src/html/cataloge.html" class="bouton bouton-principal">Découvrir la boutique</a>
+              <a href="src/html/Adoption.html" class="bouton bouton-secondaire">Adopter un animal</a>
             </div>
           </div>
           
           <img class="hero-image" src="src/les-images/accueil img.jpg" alt="Visuel hero">
         </div>
        
-          <div class="mini_header">
-            <h1 class="jota">Produits vedettes</h1>
-             <a href="Adoption.html" class="bt-voir_tout">Voir tout</a>
+        <div class="mini_header">
+          <h1 class="jota">Produits vedettes</h1>
+           <a href="Adoption.html" class="bt-voir_tout">Voir tout</a>
+        </div>
+    </section>
+
+    <section class="abb">
+      <article class="partie2">
+        <img class="photo" src="src/les-images/parte2p2.jpg" alt="Photo produit">
+         <div class="p-4">
+              <h3 class="font-poppins font-semibold text-sm mb-2">
+                Croquettes saumon & riz
+              </h3>
+              <div class="card-details flex justify-between items-center">
+                <p class="font-poppins font-semibold text-lg">49,90 €</p>
+                <button
+                  class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
+                >
+                  Ajouter
+                </button>
+              </div>
+            </div>
+      </article>
+
+      <article class="partie2">
+        <img class="photo" src="src/les-images/parte2p3.jpg" alt="Photo produit">
+        <div class="p-4">
+              <h3 class="font-poppins font-semibold text-sm mb-2">
+                Arbre à chat 120 cm
+              </h3>
+              <div class="card-details flex justify-between items-center">
+                <p class="font-poppins font-semibold text-lg">71,20 €</p>
+                <button
+                  class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
+                >
+                  Ajouter
+                </button>
+              </div>
+            </div>
+      </article>
+
+      <article class="partie2">
+        <img class="photo" src="src/les-images/parte2p4.jpg" alt="Photo produit">
+        <div class="p-4">
+              <h3 class="font-poppins font-semibold text-sm mb-2">
+           Cage rongeur spacieuse
+              </h3>
+              <div class="card-details flex justify-between items-center">
+                <p class="font-poppins font-semibold text-lg"> 64,50 €</p>
+                <button
+                  class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
+                >
+                  Ajouter
+                </button>
+              </div>
+            </div>
+      </article>
+
+      <article class="partie2">
+        <img class="photo" src="src/les-images/parte2p1.jpg" alt="Photo produit">
+         <div class="p-4">
+              <h3 class="font-poppins font-semibold text-sm mb-2">
+                Kit aquarium 60 L
+              </h3>
+              <div class="card-details flex justify-between items-center">
+                <p class="font-poppins font-semibold text-lg">129,00 €</p>
+                <button
+                  class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
+                >
+                  Ajouter
+                </button>
+              </div>
+            </div>
+      </article>
+    </section>
+
+    <!-- Adoption Section Added Back -->
+    <section class="bg-[#F0FDFA] px-10 py-24">
+      <!-- Header -->
+      <div class="mini_header2 mb-8 flex justify-between items-center">
+        <div>
+          <p class="text-[#C2410C] text-xs mb-2">ADOPTION RESPONSABLE</p>
+          <h2 class="text-2xl font-bold text-[#1C1917]">
+            Ils attendent une famille
+          </h2>
+        </div>
+        
+        <a href="#" class="text-[#C2410C] text-sm hover:underline">
+          Tous les animaux
+        </a>
+      </div>
+
+      <!-- Animals Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-[55px]">
+        <!-- Card 1 : Moka -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
+          <img src="/src/les-images/partie3img3.jpg" alt="Moka" class="w-full md:h-50 object-cover">
+          <div class="p-2">
+            <h3 class="text-sm font-semibold text-[#1C1917]">
+              Moka
+            </h3>
+            <p class="text-xs text-[#44403C] mt-2">
+              Câline et calme, elle aime les siestes au soleil.
+            </p>
+            <a href="#" class="block text-center border border-[#C2410C] text-[#C2410C] text-xs py-2 rounded-lg mt-3 hover:bg-[#C2410C] hover:text-white transition">
+              Découvrir Moka
+            </a>
           </div>
-      </section>
-      <section class="abb">
-        <article class=""partie2>
-          <img class="photo" src="src/les-images/parte2p2.jpg" alt="Photo produit">
-           <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Croquettes saumon & riz
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-semibold text-lg">49,90 €</p>
-                      <button
-                        class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
-                      >
-                        Ajouter
-                      </button>
-                    </div>
-                  </div>
-          
-        </article>
-        <article class=""partie2>
-          <img class="photo" src="src/les-images/parte2p3.jpg" alt="Photo produit">
-          <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Arbre à chat 120 cm
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-semibold text-lg">71,20 €</p>
-                      <button
-                        class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
-                      >
-                        Ajouter
-                      </button>
-                    </div>
-                  </div>
-          
-        </article>
-        <article class="partie2">
-          <img class="photo" src="src/les-images/parte2p4.jpg" alt="Photo produit">
-          <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                 Cage rongeur spacieuse
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-semibold text-lg"> 64,50 €</p>
-                      <button
-                        class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
-                      >
-                        Ajouter
-                      </button>
-                    </div>
-                  </div>
-        </article>
-        <article class="partie2">
-          <img class="photo" src="src/les-images/parte2p1.jpg" alt="Photo produit">
-           <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                     Kit aquarium 60 L
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-semibold text-lg">129,00 €</p>
-                      <button
-                        class="font-poppins font-semibold  rounded-[14px] px-4 py-2 bg-[#C2410C] text-white"
-                      >
-                        Ajouter
-                      </button>
-                    </div>
-                  </div>
-        </article>
-       
-      </section>
+        </div>
+
+        <!-- Card 2 : Rocky -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
+          <img src="/src/les-images/partie3img2.jpg" alt="Rocky" class="w-full md:h-50 object-cover">
+          <div class="p-2">
+            <h3 class="text-sm font-semibold text-[#1C1917]">
+              Rocky
+            </h3>
+            <p class="text-xs text-[#44403C] mt-2">
+              Joueur et sportif, idéal pour une famille active.
+            </p>
+            <a href="#" class="block text-center border border-[#C2410C] text-[#C2410C] text-xs py-2 rounded-lg mt-3 hover:bg-[#C2410C] hover:text-white transition">
+              Découvrir Rocky
+            </a>
+          </div>
+        </div>
+        <!-- Card 3 : Noisette -->
+        <div class="bg-white rounded-xl overflow-hidden border border-gray-200">
+          <img src="src/les-images/partie3img1.jpg" alt="Noisette" class="w-full h-32 md:h-50 object-cover">
+          <div class="p-2">
+            <h3 class="text-sm font-semibold text-[#1C1917]">
+              Noisette
+            </h3>
+            <p class="text-xs text-[#44403C] mt-2">
+              Curieuse et douce.
+            </p>
+            <a href="#" class="block text-center border border-[#C2410C] text-[#C2410C] text-xs py-2 rounded-lg mt-3 hover:bg-[#C2410C] hover:text-white transition">
+              Découvrir Noisette
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="final">
+      Nos marques partenaires
+    </div>
+
     <!-- footer -->
-   <footer class="bg-neutral-900 text-white pt-12 pb-6">
+    <footer class="bg-neutral-900 text-white pt-12 pb-6">
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -239,6 +311,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Script Menu Burger -->
     <script>
       const burger = document.getElementById("burger");

@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Adoption - PetNest</title>
 
     <link rel="stylesheet" href="../css/Adoption.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -25,53 +22,111 @@
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body class="font-['Poppins',sans-serif] bg-white text-gray-800">
 
-    <!-- Header -->
-    <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
-            <nav class="flex items-center justify-between">
-                <a href="/index.html" class="flex items-center gap-2">
-                    <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto">
-                </a>
+<header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-3">
+    <nav class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/index.html" class="flex items-center gap-2">
+        <img
+          src="/src/les-images/Logo.png"
+          alt="PetNest logo"
+          class="h-8 w-auto"
+        />
+      </a>
+      <ul class="hidden md:flex items-center space-x-7 text-[15px] font-medium text-gray-800">
+        <li>
+          <a href="/index.html" class="hover:text-orange-600 transition">Accueil</a>
+        </li>
+        <li>
+          <a href="/src/html/cataloge.html" class="hover:text-orange-600 transition">Boutique</a>
+        </li>
+        <li>
+          <!-- Page Actuelle: Adoption (Ligne orange ici) -->
+          <a href="/src/html/Adoption.html" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">Adoption</a>
+        </li>
+        <li>
+          <a href="/src/html/service.html" class="hover:text-orange-600 transition">Services</a>
+        </li>
+        <li>
+          <a href="/src/html/contact.html" class="hover:text-orange-600 transition">Contact</a>
+        </li>
+      </ul>
 
-                <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-                    <li><a href="/index.html" class="hover:text-orange-600">Accueil</a></li>
-                    <li><a href="./cataloge.html" class="hover:text-orange-600">Boutique</a></li>
-                    <li><a href="./Adoption.html" class="text-orange-600 font-semibold">Adoption</a></li>
-                    <li><a href="./service.html" class="hover:text-orange-600">Services</a></li>
-                    <li><a href="./#service" class="hover:text-orange-600">Contact</a></li>
-                </ul>
+      <div class="flex items-center space-x-4">
+        <a
+          href="/src/html/panier.html"
+          aria-label="Panier"
+          class="relative text-gray-700 hover:text-orange-600 p-1 flex items-center justify-center"
+        >
+          <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
+          <span
+            class="absolute -top-1 -right-1.5 bg-orange-600 text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center"
+          >
+            2
+          </span>
+        </a>
+        <a
+          href="/src/html/service.html"
+          class="hidden sm:inline-block bg-orange-600 text-white font-medium text-sm px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
+        >
+          Prendre RDV
+        </a>
+        <button
+          id="burger"
+          class="md:hidden text-2xl text-gray-700 focus:outline-none flex items-center"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </nav>
+  </div>
 
-                <div class="flex items-center gap-4">
-                    <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 p-2">
-                        <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
-                    </a>
-
-                    <a href="Services-contact.html" class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700">
-                        Prendre RDV
-                    </a>
-
-                    <button id="burger" type="button" class="md:hidden text-2xl" aria-label="Menu" aria-expanded="false">
-                        <ion-icon name="menu-outline"></ion-icon>
-                    </button>
-                </div>
-            </nav>
-        </div>
-
-        <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
-            <a href="/index.html">Accueil</a>
-            <a href="./cataloge.html">Boutique</a>
-            <a href="./Adoption.html">Adoption</a>
-            <a href="./service.html">Services</a>
-            <a href="Services-contact.html">Contact</a>
-        </div>
-    </header>
+  <div
+    id="mobileMenu"
+    class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3"
+  >
+    <a
+      href="/index.html"
+      class="flex justify-between items-center py-2 font-medium hover:text-orange-600"
+      >Accueil <ion-icon name="chevron-forward-outline"></ion-icon
+    ></a>
+    <a
+      href="/src/html/cataloge.html"
+      class="flex justify-between items-center py-2 font-medium hover:text-orange-600"
+      >Boutique <ion-icon name="chevron-forward-outline"></ion-icon
+    ></a>
+    <a
+      href="/src/html/Adoption.html"
+      class="flex justify-between items-center py-2 font-medium text-orange-600"
+      >Adoption <ion-icon name="chevron-forward-outline"></ion-icon
+    ></a>
+    <a
+      href="/src/html/service.html"
+      class="flex justify-between items-center py-2 font-medium hover:text-orange-600"
+      >Services <ion-icon name="chevron-forward-outline"></ion-icon
+    ></a>
+    <a
+      href="/src/html/contact.html"
+      class="flex justify-between items-center py-2 font-medium hover:text-orange-600"
+      >Contact <ion-icon name="chevron-forward-outline"></ion-icon
+    ></a>
+    <a
+      href="/src/html/service.html"
+      class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2"
+    >
+      Prendre RDV
+    </a>
+  </div>
+</header>
     <section class="w-full bg-[#F0FDFA] py-12 md:py-16">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
@@ -83,6 +138,7 @@
                         Tous nos animaux sont vaccinés, identifiés et suivis par un vétérinaire. Notre équipe vous accompagne avant et après l'adoption.
                     </p>
                 </div>
+
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto">
                     <div class="bg-white p-6 rounded-2xl border shadow-sm">
                         <span class="block text-3xl font-bold text-teal-700 mb-1">48</span>
@@ -104,6 +160,7 @@
         <div class="photoRocky">
             <img src="../les-images/DogAdoption.jpg" alt="Photo de Rocky">
         </div>
+
         <div class="content-wrapper">
             <h2>Rocky, 4 ans</h2>
             <h3>Son histoire</h3>
@@ -111,13 +168,15 @@
                 Rocky a été confié au refuge après le déménagement de sa famille.
                 Très joueur, il adore les longues balades et apprend vite les ordres de base.
             </p>
+
             <div class="btn-container">
                 <button type="button" id="adopterRocky">Demander à adopter Rocky</button>
             </div>
         </div>
     </section>
-        <section class="section3" id="formulaire-adoption">
+    <section class="section3" id="formulaire-adoption">
         <div class="adoption-wrapper">
+
             <div class="form-intro">
                 <p class="subtitle">FORMULAIRE</p>
                 <h2>Demande d'adoption</h2>
@@ -126,6 +185,7 @@
                     Les champs marqués * sont obligatoires.
                 </p>
             </div>
+
             <div class="form-card">
                 <form class="formulaire" id="formAdoption" novalidate>
                     <div class="form-grid">
@@ -184,6 +244,7 @@
             </div>
         </div>
     </section>
+    <!-- Footer -->
     <footer class="bg-neutral-900 text-white pt-12 pb-6">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -227,24 +288,33 @@
             </div>
         </div>
     </footer>
+    <!-- Script Menu Mobile & Scroll -->
     <script>
         const burger = document.getElementById("burger");
         const mobileMenu = document.getElementById("mobileMenu");
+
         burger.addEventListener("click", function () {
             const isHidden = mobileMenu.classList.contains("hidden");
+
             mobileMenu.classList.toggle("hidden", !isHidden);
             mobileMenu.classList.toggle("flex", isHidden);
+
             burger.innerHTML = isHidden
                 ? '<ion-icon name="close-outline"></ion-icon>'
                 : '<ion-icon name="menu-outline"></ion-icon>';
+
             burger.setAttribute("aria-expanded", isHidden);
         });
-        document.getElementById("adopterRocky").addEventListener("click", function () {
-            document.getElementById("animal").value = "Rocky — chien, 4 ans";
-            document.getElementById("formulaire-adoption").scrollIntoView({
-                behavior: "smooth"
+
+        const adopterBtn = document.getElementById("adopterRocky");
+        if(adopterBtn) {
+            adopterBtn.addEventListener("click", function () {
+                document.getElementById("animal").value = "Rocky — chien, 4 ans";
+                document.getElementById("formulaire-adoption").scrollIntoView({
+                    behavior: "smooth"
+                });
             });
-        });
+        }
     </script>
     <script src="../scriptJs/script.js"></script>
 </body>

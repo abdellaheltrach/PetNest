@@ -7,8 +7,8 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="/src/css/cataloge.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/src/css/cataloge.css" />
+    <link rel="stylesheet" href="/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -20,6 +20,7 @@
     <style type="text/tailwind">
       @theme {
         --font-poppins: "Poppins", sans-serif;
+        --font-inter: "Inter", sans-serif;
       }
     </style>
 
@@ -30,36 +31,78 @@
     />
 
     <!-- Ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
-  <body >
+  <body>
     <!-- header -->
     <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <nav class="flex items-center justify-between">
           <!-- Logo -->
           <a href="/index.html" class="flex items-center gap-2">
-            <img src="/src/les-images/Logo.png" alt="PetNest logo" class="h-9 w-auto" />
+            <img
+              src="/src/les-images/Logo.png"
+              alt="PetNest logo"
+              class="h-9 w-auto"
+            />
           </a>
 
           <!-- Liens Desktop -->
-          <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-            <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
-            <li><a href="/src/html/cataloge.html" class="lien-actif transition">Boutique</a></li>
+          <ul
+            class="hidden md:flex items-center space-x-8 font-medium text-gray-700"
+          >
             <li>
-              <a href="/src/html/Adoption.html" class="hover:text-orange-600 transition">
+              <a href="/index.html" class="hover:text-orange-600 transition"
+                >Accueil</a
+              >
+            </li>
+            <li>
+              <a href="/src/html/cataloge.html" class="lien-actif transition"
+                >Boutique</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/html/Adoption.html"
+                class="hover:text-orange-600 transition"
+              >
                 Adoption
               </a>
             </li>
-            <li><a href="/src/html/service.html" class="hover:text-orange-600 transition">Services et Contact</a></li>
+            <li>
+              <a
+                href="/src/html/service.html"
+                class="hover:text-orange-600 transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="/src/html/service.html"
+                class="hover:text-orange-600 transition"
+                >Contact</a
+              >
+            </li>
           </ul>
 
           <!-- Action Droite -->
           <div class="flex items-center space-x-4">
-            <a href="/src/html/panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
+            <a
+              href="/src/html/panier.html"
+              aria-label="Panier"
+              class="relative text-gray-700 hover:text-orange-600 p-2"
+            >
               <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
-              <span class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              <span
+                class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
+              >
                 2
               </span>
             </a>
@@ -84,19 +127,46 @@
         </nav>
       </div>
       <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
-        <a href="/index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/cataloge.html" class="lien-actif flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/service.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="/src/html/service.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
+      <div
+        id="mobileMenu"
+        class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3"
+      >
+        <a
+          href="/index.html"
+          class="flex justify-between items-center py-2 font-medium"
+          >Accueil <ion-icon name="chevron-forward-outline"></ion-icon
+        ></a>
+        <a
+          href="/src/html/cataloge.html"
+          class="lien-actif flex justify-between items-center py-2 font-medium"
+          >Boutique <ion-icon name="chevron-forward-outline"></ion-icon
+        ></a>
+        <a
+          href="/src/html/Adoption.html"
+          class="flex justify-between items-center py-2 font-medium"
+          >Adoption <ion-icon name="chevron-forward-outline"></ion-icon
+        ></a>
+        <a
+          href="/src/html/service.html"
+          class="flex justify-between items-center py-2 font-medium"
+          >Services <ion-icon name="chevron-forward-outline"></ion-icon
+        ></a>
+        <a
+          href="/src/html/service.html"
+          class="flex justify-between items-center py-2 font-medium"
+          >Contact <ion-icon name="chevron-forward-outline"></ion-icon
+        ></a>
+        <a
+          href="/src/html/service.html"
+          class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2"
+        >
           Prendre RDV
         </a>
       </div>
     </header>
 
     <!-- hero -->
-    <div class=" py-[40px] bg-[#FFE4D3]">
+    <div class="py-[40px] bg-[#FFE4D3]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <h1 class="text-3xl font-poppins font-bold text-neutral-900 mb-2">
           Boutique — Chiens
@@ -129,6 +199,7 @@
           <!-- Price Filter -->
           <div class="price-filter">
             <p class="font-poppins font-semibold mb-4">Prix</p>
+
             <div class="relative flex items-center select-none mb-2">
               <input
                 type="range"
@@ -176,20 +247,24 @@
             <div class="product-grid w-full">
               <!-- Product 1 -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
-                  <img
-                    src="../les-images/DogAdoption.jpg"
-                    alt="Croquettes saumon & riz"
-                    class="w-full rounded-t-[20px]"
-                  />
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Croquette.webp"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
                   <div class="p-4">
                     <h3 class="font-poppins font-semibold text-sm mb-2">
                       Croquettes saumon & riz
                     </h3>
                     <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <p class="font-poppins font-semibold text-lg">49,90 €</p>
                       <button
-                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
                       >
                         Ajouter
                       </button>
@@ -198,22 +273,27 @@
                 </div>
               </div>
 
-              <!-- Product 2 (Example for 3 columns) -->
+              <!-- Product 2  -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
-                  <img
-                    src="../les-images/DogAdoption.jpg"
-                    alt="Croquettes saumon & riz"
-                    class="w-full rounded-t-[20px]"
-                  />
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Os à mâcher naturels x3.jpeg"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
                   <div class="p-4">
                     <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Croquettes saumon & riz
+                      Os à mâcher naturels x3
                     </h3>
                     <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <p class="font-poppins font-bold text-lg">8,90 €</p>
                       <button
-                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
                       >
                         Ajouter
                       </button>
@@ -222,22 +302,109 @@
                 </div>
               </div>
 
-              <!-- Product 3 (Example for 3 columns) -->
+              <!-- Product 3  -->
               <div class="product-card my-[24px]">
-                <div class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]">
-                  <img
-                    src="../les-images/DogAdoption.jpg"
-                    alt="Croquettes saumon & riz"
-                    class="w-full rounded-t-[20px]"
-                  />
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Harnais réglable taille M.jpeg"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
                   <div class="p-4">
                     <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Croquettes saumon & riz
+                      Harnais réglable taille M
                     </h3>
                     <div class="card-details flex justify-between items-center">
                       <p class="font-poppins font-bold text-lg">29,99 €</p>
                       <button
-                        class="rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Product 4 -->
+              <div class="product-card my-[24px]">
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Panier déhoussable 80 cm .jpeg"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Panier déhoussable 80 cm
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="hover:cursor-pointer rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 5  -->
+              <div class="product-card my-[24px]">
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Shampooing peaux .jpeg"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Shampooing peaux 
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="btn-inactive hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                      >
+                        Ajouter
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product 6 -->
+              <div class="product-card my-[24px]">
+                <div
+                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                >
+                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                    <img
+                      src="/src/les-images/Balles lumineuses x2.jpeg"
+                      alt="Croquettes saumon & riz"
+                      class="w-full rounded-t-[20px]"
+                    />
+                  </a>
+                  <div class="p-4">
+                    <h3 class="font-poppins font-semibold text-sm mb-2">
+                      Balles lumineuses x2
+                    </h3>
+                    <div class="card-details flex justify-between items-center">
+                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <button
+                        class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
                       >
                         Ajouter
                       </button>
@@ -247,6 +414,38 @@
               </div>
             </div>
             <!-- end product grid -->
+
+            <!-- pagination -->
+            <div class="pagination">
+              <button
+                class="btn-inactive font-poppins rounded-[12px] px-4 py-2 bg-[#E7E5E4] ]"
+              >
+                <
+              </button>
+
+              <button
+                class="font-poppins rounded-[12px] px-4 py-2 bg-[#C2410C] text-white"
+              >
+                1
+              </button>
+
+              <button
+                class="font-poppins hover:cursor-pointer rounded-[12px] px-4 py-2 bg-[#E7E5E4] text-black"
+              >
+                2
+              </button>
+
+              <button
+                class="font-poppins hover:cursor-pointer rounded-[12px] px-4 py-2 bg-[#E7E5E4] text-black"
+              >
+                3
+              </button>
+              <button
+                class="font-poppins hover:cursor-pointer rounded-[12px] px-4 py-2 bg-[#E7E5E4] text-black"
+              >
+                >
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -257,42 +456,105 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <img src="../les-images/Logo footer.png" alt="PetNest logo" class="h-8 mb-4" />
+            <img
+              src="../les-images/Logo footer.png"
+              alt="PetNest logo"
+              class="h-8 mb-4"
+            />
             <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-              Produits, adoption responsable et services pour le bien-être de vos animaux.
+              Produits, adoption responsable et services pour le bien-être de
+              vos animaux.
             </p>
             <div class="flex space-x-3">
-              <a href="https://www.instagram.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.youtube.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-youtube"></i></a>
-              <a href="https://www.facebook.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-solid fa-share-nodes"></i></a>
+              <a
+                href="https://www.instagram.com"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.facebook.com"
+                class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"
+                ><i class="fa-solid fa-share-nodes"></i
+              ></a>
             </div>
           </div>
           <div>
             <h3 class="font-semibold mb-4 text-lg">Boutique</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
-              <li><a href="/src/html/cataloge.html" class=" hover:text-white transition">Chiens</a></li>
-              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Chats</a></li>
-              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Rongeurs</a></li>
+              <li>
+                <a
+                  href="/src/html/cataloge.html"
+                  class="hover:text-white transition"
+                  >Chiens</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/html/cataloge.html"
+                  class="hover:text-white transition"
+                  >Chats</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/html/cataloge.html"
+                  class="hover:text-white transition"
+                  >Rongeurs</a
+                >
+              </li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold mb-4 text-lg">Aide</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
-              <li><a href="/src/html/service.html" class="hover:text-white transition">FAQ</a></li>
-              <li><a href="/src/html/service.html" class="hover:text-white transition">Livraison</a></li>
-              <li><a href="/src/html/service.html" class="hover:text-white transition">Retours</a></li>
+              <li>
+                <a
+                  href="/src/html/service.html"
+                  class="hover:text-white transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/html/service.html"
+                  class="hover:text-white transition"
+                  >Livraison</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/src/html/service.html"
+                  class="hover:text-white transition"
+                  >Retours</a
+                >
+              </li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold mb-4 text-lg">Contact</h3>
             <ul class="space-y-2 text-sm text-neutral-400">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-orange-500"></i> 12 rue des Lilas, Casablanca</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-orange-500"></i> 05 22 00 00 00</li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-orange-500"></i> bonjour@petnest.ma</li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-orange-500"></i> 12 rue
+                des Lilas, Casablanca
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-phone text-orange-500"></i> 05 22 00 00 00
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-envelope text-orange-500"></i>
+                bonjour@petnest.ma
+              </li>
             </ul>
           </div>
         </div>
-        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-400">
+        <div
+          class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-400"
+        >
           <p>&copy; 2026 PetNest. Tous droits réservés.</p>
           <div class="space-x-4 mt-2 sm:mt-0">
             <a href="#" class="hover:text-white">Mentions légales</a>

@@ -20,7 +20,7 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-     <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
         <nav class="flex items-center justify-between">
           <!-- Logo -->
@@ -31,19 +31,18 @@
           <!-- Liens Desktop -->
           <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
             <li><a href="/index.html" class="hover:text-orange-600 transition">Accueil</a></li>
-            <li><a href="./Boutique.html" aria-current="page" class="text-orange-600 font-semibold border-b-2 border-orange-600 pb-1">Boutique</a></li>
+            <li><a href="/src/html/cataloge.html" class="lien-actif transition">Boutique</a></li>
             <li>
-              <a href="./Adoption.html" class="hover: text-orange-600 transition">
+              <a href="/src/html/Adoption.html" class="hover:text-orange-600 transition">
                 Adoption
               </a>
             </li>
-            <li><a href="./Services.html" class="hover:text-orange-600 transition">Services</a></li>
-            <li><a href="./Contact.html" class="hover:text-orange-600 transition">Contact</a></li>
+            <li><a href="/src/html/service.html" class="hover:text-orange-600 transition">Services et Contact</a></li>
           </ul>
 
           <!-- Action Droite -->
           <div class="flex items-center space-x-4">
-            <a href="Panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
+            <a href="/src/html/panier.html" aria-label="Panier" class="relative text-gray-700 hover:text-orange-600 p-2">
               <ion-icon name="cart-outline" class="text-2xl block"></ion-icon>
               <span class="absolute -top-1 -right-1 bg-orange-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 2
@@ -51,7 +50,7 @@
             </a>
 
             <a
-              href="Services-contact.html"
+              href="/src/html/service.html"
               class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
             >
               Prendre RDV
@@ -71,17 +70,22 @@
       </div>
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden flex-col bg-white border-t border-gray-100 px-6 py-4 md:hidden space-y-3">
-        <a href="index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Boutique.html" class="flex justify-between items-center py-2 text-orange-600 font-semibold">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
-  <a href="Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Services.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Contact.html" class="flex justify-between items-center py-2 font-medium">Contact <ion-icon name="chevron-forward-outline"></ion-icon></a>
-        <a href="Services-contact.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
+        <a href="/index.html" class="flex justify-between items-center py-2 font-medium">Accueil <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/cataloge.html" class="lien-actif flex justify-between items-center py-2 font-medium">Boutique <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/Adoption.html" class="flex justify-between items-center py-2 font-medium">Adoption <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/service.html" class="flex justify-between items-center py-2 font-medium">Services <ion-icon name="chevron-forward-outline"></ion-icon></a>
+        <a href="/src/html/service.html" class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2">
           Prendre RDV
         </a>
       </div>
     </header>
   <main>
+    <div class="max-w-6xl mx-auto px-4 pt-6 md:px-8 lg:px-12">
+        <a href="./cataloge.html" class="produit-retour text-sm text-neutral-600 hover:text-orange-700">
+           <span class="produit-fleche"></span>
+            Retour
+        </a>
+    </div>
     <section class="produit-grille max-w-6xl mx-auto px-4 py-6 md:px-8 lg:px-12">
 
       <div>
@@ -234,61 +238,54 @@
     </section>
     
   </main>
-  <footer class="bg-neutral-900 text-neutral-0 pt-10 pb-5">
-    <div class="conteneur">
-      <div class="footer-colonnes">
-
-        <div>
-          <a href="Accueil.html" class="block mb-3">
-            <img src="../les-images/Logo footer.png" alt="PetNest logo">
-          </a>
-          <p class="text-sm leading-6 mb-3 max-w-xs">
-            Produits, adoption responsable et services pour le bien-être de vos animaux.
-          </p>
-          <div class="footer-reseaux">
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#" class="footer-reseau w-8 h-8 rounded-full bg-white/10" aria-label="Partager"><i class="fa-solid fa-share-nodes"></i></a>
+  <footer class="bg-neutral-900 text-white pt-12 pb-6">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <img src="../les-images/Logo footer.png" alt="PetNest logo" class="h-8 mb-4" />
+            <p class="text-sm text-neutral-400 leading-relaxed mb-4">
+              Produits, adoption responsable et services pour le bien-être de vos animaux.
+            </p>
+            <div class="flex space-x-3">
+              <a href="https://www.instagram.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.youtube.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://www.facebook.com" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange-600 transition"><i class="fa-solid fa-share-nodes"></i></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Boutique</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Chiens</a></li>
+              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Chats</a></li>
+              <li><a href="/src/html/cataloge.html" class="hover:text-white transition">Rongeurs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Aide</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li><a href="/src/html/service.html" class="hover:text-white transition">FAQ</a></li>
+              <li><a href="/src/html/service.html" class="hover:text-white transition">Livraison</a></li>
+              <li><a href="/src/html/service.html" class="hover:text-white transition">Retours</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4 text-lg">Contact</h3>
+            <ul class="space-y-2 text-sm text-neutral-400">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-orange-500"></i> 12 rue des Lilas, Casablanca</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-orange-500"></i> 05 22 00 00 00</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-orange-500"></i> bonjour@petnest.ma</li>
+            </ul>
           </div>
         </div>
-
-        <div>
-          <h3 class="text-base font-semibold mb-4">Boutique</h3>
-          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Chiens</a>
-          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Chats</a>
-          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Rongeurs</a>
-          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Oiseaux</a>
-          <a href="./cataloge.html" class="block text-sm mb-2.5 hover:text-primary-500">Poissons</a>
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-400">
+          <p>&copy; 2026 PetNest. Tous droits réservés.</p>
+          <div class="space-x-4 mt-2 sm:mt-0">
+            <a href="#" class="hover:text-white">Mentions légales</a>
+            <a href="#" class="hover:text-white">Confidentialité</a>
+          </div>
         </div>
-
-        <div>
-          <h3 class="text-base font-semibold mb-4">Aide</h3>
-          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">FAQ</a>
-          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Livraison</a>
-          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Retours</a>
-          <a href="#" class="block text-sm mb-2.5 hover:text-primary-500">Conditions générales</a>
-        </div>
-
-        <div>
-          <h3 class="text-base font-semibold mb-4">Contact</h3>
-          <p class="text-sm mb-2.5"><i class="fa-solid fa-location-dot text-orange-500 w-5 mr-2 text-center"></i> 12 rue des Lilas, Casablanca</p>
-          <p class="text-sm mb-2.5"><i class="fa-solid fa-phone text-orange-500 w-5 mr-2 text-center"></i> 05 22 00 00 00</p>
-          <p class="text-sm mb-2.5"><i class="fa-solid fa-envelope text-orange-500 w-5 mr-2 text-center"></i> bonjour@petnest.ma</p>
-          <p class="text-sm mb-2.5"><i class="fa-solid fa-clock text-orange-500 w-5 mr-2 text-center"></i> Lun - Sam : 9 h - 19 h</p>
-        </div>
-
       </div>
-
-      <div class="footer-bas mt-8 pt-4 border-t border-white/10 text-xs text-neutral-400">
-        <p>&copy; 2026 PetNest. Tous droits réservés.</p>
-        <p>
-          <a href="#" class="hover:text-neutral-0">Mentions légales</a> ·
-          <a href="#" class="hover:text-neutral-0">Confidentialité</a>
-        </p>
-      </div>
-
-    </div>
-  </footer>
+    </footer>
 
   <!-- SCRIPTS -->
   <script>

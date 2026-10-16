@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
     .panier-grid {
-        grid-template-columns: 1fr; /* كيرجع عمود واحد غير ف التليفون */
+        grid-template-columns: 1fr; /* kyrj3 3amoud wahd f telephone */
     }
 }
 
@@ -128,4 +128,12 @@
     100% {
         transform: translateX(-50%);
     }
+}
+
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
 }

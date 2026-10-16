@@ -164,7 +164,6 @@
         </a>
       </div>
     </header>
-    cc
     <!-- hero -->
     <div class="py-[40px] bg-[#FFE4D3]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
@@ -236,15 +235,15 @@
 
               <div class="flex flex-col gap-3">
                 <p>Trier par</p>
-                <select class="price-selector">
-                  <option selected="">Prix croissant</option>
-                  <option>Prix décroissant</option>
+                <select id="sort-select" class="price-selector">
+                  <option value="asc" selected="">Prix croissant</option>
+                  <option value="desc">Prix décroissant</option>
                 </select>
               </div>
             </div>
 
             <!-- product grid -->
-            <div class="product-grid w-full">
+            <div id="product-grid" class="product-grid w-full">
               <!-- Product 1 -->
               <div class="product-card my-[24px]">
                 <div
@@ -601,5 +600,7 @@
         burger.setAttribute("aria-expanded", isHidden);
       });
     </script>
+
+    <script src="/src/js/cataloge.js"></script>
   </body>
 </html>

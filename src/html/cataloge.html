@@ -85,7 +85,7 @@
             </li>
             <li>
               <a
-                href="/src/html/service.html"
+                href="/src/html/contact.html"
                 class="hover:text-orange-600 transition"
                 >Contact</a
               >
@@ -108,7 +108,7 @@
             </a>
 
             <a
-              href="/src/html/service.html"
+              href="/src/html/contact.html"
               class="hidden sm:inline-block bg-orange-600 text-white font-semibold px-5 py-2.5 rounded-xl hover:bg-orange-700 transition"
             >
               Prendre RDV
@@ -152,19 +152,18 @@
           >Services <ion-icon name="chevron-forward-outline"></ion-icon
         ></a>
         <a
-          href="/src/html/service.html"
+          href="/src/html/contact.html"
           class="flex justify-between items-center py-2 font-medium"
           >Contact <ion-icon name="chevron-forward-outline"></ion-icon
         ></a>
         <a
-          href="/src/html/service.html"
+          href="/src/html/contact.html"
           class="block w-full text-center bg-orange-600 text-white font-semibold py-2.5 rounded-xl mt-2"
         >
           Prendre RDV
         </a>
       </div>
     </header>
-    cc
     <!-- hero -->
     <div class="py-[40px] bg-[#FFE4D3]">
       <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4">
@@ -236,21 +235,24 @@
 
               <div class="flex flex-col gap-3">
                 <p>Trier par</p>
-                <select class="price-selector">
-                  <option selected="">Prix croissant</option>
-                  <option>Prix décroissant</option>
+                <select id="sort-select" class="price-selector">
+                  <option value="asc" selected="">Prix croissant</option>
+                  <option value="desc">Prix décroissant</option>
                 </select>
               </div>
             </div>
 
             <!-- product grid -->
-            <div class="product-grid w-full">
+            <div id="product-grid" class="product-grid w-full">
               <!-- Product 1 -->
               <div class="product-card my-[24px]">
                 <div
                   class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
                 >
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                  <a
+                    href="/src/html/detail-produit.html"
+                    alt="Croquettes saumon & riz"
+                  >
                     <img
                       src="/src/les-images/Croquette.webp"
                       alt="Croquettes saumon & riz"
@@ -278,8 +280,10 @@
                 <div
                   class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
                 >
-                
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                  <a
+                    href="/src/html/detail-produit.html"
+                    alt="Croquettes saumon & riz"
+                  >
                     <img
                       src="/src/les-images/Os à mâcher naturels x3.jpeg"
                       alt="Croquettes saumon & riz"
@@ -307,7 +311,10 @@
                 <div
                   class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
                 >
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
+                  <a
+                    href="/src/html/detail-produit.html"
+                    alt="Croquettes saumon & riz"
+                  >
                     <img
                       src="/src/les-images/Harnais réglable taille M.jpeg"
                       alt="Croquettes saumon & riz"
@@ -319,7 +326,7 @@
                       Harnais réglable taille M
                     </h3>
                     <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
+                      <p class="font-poppins font-bold text-lg">21,15 €</p>
                       <button
                         class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
                       >
@@ -329,90 +336,106 @@
                   </div>
                 </div>
               </div>
-              <!-- Product 4 -->
-              <div class="product-card my-[24px]">
-                <div
-                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
-                >
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
-                    <img
-                      src="/src/les-images/Panier déhoussable 80 cm .jpeg"
-                      alt="Croquettes saumon & riz"
-                      class="w-full rounded-t-[20px]"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Panier déhoussable 80 cm
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
-                      <button
-                        class="hover:cursor-pointer rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
-                      >
-                        Ajouter
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Product 5  -->
-              <div class="product-card my-[24px]">
-                <div
-                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
-                >
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
-                    <img
-                      src="/src/les-images/Shampooing peaux .jpeg"
+                <!-- Product 4 -->
+                <div class="hide-phone product-card my-[24px]">
+                  <div
+                    class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                  >
+                    <a
+                      href="/src/html/detail-produit.html"
                       alt="Croquettes saumon & riz"
-                      class="w-full rounded-t-[20px]"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Shampooing peaux 
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
-                      <button
-                        class="btn-inactive hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                    >
+                      <img
+                        src="/src/les-images/Panier déhoussable 80 cm .jpeg"
+                        alt="Croquettes saumon & riz"
+                        class="w-full rounded-t-[20px]"
+                      />
+                    </a>
+                    <div class="p-4">
+                      <h3 class="font-poppins font-semibold text-sm mb-2">
+                        Panier déhoussable 80 cm
+                      </h3>
+                      <div
+                        class="card-details flex justify-between items-center"
                       >
-                        Ajouter
-                      </button>
+                        <p class="font-poppins font-bold text-lg">59,00 €</p>
+                        <button
+                          class="hover:cursor-pointer rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        >
+                          Ajouter
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Product 6 -->
-              <div class="product-card my-[24px]">
-                <div
-                  class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
-                >
-                  <a href="/src/html/detail-produit.html" alt ="Croquettes saumon & riz">
-                    <img
-                      src="/src/les-images/Balles lumineuses x2.jpeg"
+                <!-- Product 5  -->
+                <div class="hide-phone product-card my-[24px]">
+                  <div
+                    class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                  >
+                    <a
+                      href="/src/html/detail-produit.html"
                       alt="Croquettes saumon & riz"
-                      class="w-full rounded-t-[20px]"
-                    />
-                  </a>
-                  <div class="p-4">
-                    <h3 class="font-poppins font-semibold text-sm mb-2">
-                      Balles lumineuses x2
-                    </h3>
-                    <div class="card-details flex justify-between items-center">
-                      <p class="font-poppins font-bold text-lg">29,99 €</p>
-                      <button
-                        class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                    >
+                      <img
+                        src="/src/les-images/Shampooing peaux .jpeg"
+                        alt="Croquettes saumon & riz"
+                        class="w-full rounded-t-[20px]"
+                      />
+                    </a>
+                    <div class="p-4">
+                      <h3 class="font-poppins font-semibold text-sm mb-2">
+                        Shampooing peaux
+                      </h3>
+                      <div
+                        class="card-details flex justify-between items-center"
                       >
-                        Ajouter
-                      </button>
+                        <p class="font-poppins font-bold text-lg">12,50 €</p>
+                        <button
+                          class="btn-inactive hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        >
+                          Ajouter
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="hide-phone product-card my-[24px]">
+                  <div
+                    class="bg-[#FAFAF9] rounded-[20px] overflow-hidden border-[#E7E5E4]"
+                  >
+                    <a
+                      href="/src/html/detail-produit.html"
+                      alt="Croquettes saumon & riz"
+                    >
+                      <img
+                        src="/src/les-images/Balles lumineuses x2.jpeg"
+                        alt="Croquettes saumon & riz"
+                        class="w-full rounded-t-[20px]"
+                      />
+                    </a>
+                    <div class="p-4">
+                      <h3 class="font-poppins font-semibold text-sm mb-2">
+                        Balles lumineuses x2
+                      </h3>
+                      <div
+                        class="card-details flex justify-between items-center"
+                      >
+                        <p class="font-poppins font-bold text-lg">9,90 €</p>
+                        <button
+                          class="hover:cursor-pointer font-poppins font-semibold rounded-[20px] px-4 py-2 bg-[#C2410C] text-white"
+                        >
+                          Ajouter
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
             <!-- end product grid -->
 
             <!-- pagination -->
@@ -577,5 +600,7 @@
         burger.setAttribute("aria-expanded", isHidden);
       });
     </script>
+
+    <script src="/src/js/cataloge.js"></script>
   </body>
 </html>

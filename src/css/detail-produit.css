@@ -83,3 +83,18 @@
   align-items: center;
   gap: 8px;
 }
+/* Flèche + texte sur une ligne (flex) */
+.produit-retour {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* La flèche dessinée avec une bordure */
+.produit-fleche {
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}

@@ -319,17 +319,26 @@ img {
     width: 250px;
    
   }
+  .animal-cards{
+    padding-left: 16px;
+    padding-right:30px ;
+    gap: 8px;
+  }
   
   .hero-image{
     width: 343px;
-   
-    border-radius: 24px;
+   padding-left:24px;
+   padding-right:24px;
+    border-radius:24px;
     gap: 8px;
 
   }
   .abb{
     display: flex;
     flex-direction: column;
+    padding-left: 4px;
+    padding-right: 4px;
+  
   }
   .mini_header{
     display: flex;
@@ -385,9 +394,13 @@ img {
  text-transform: uppercase;
  
 }
+.partie2{
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 48px;
+  padding-top: 48px;
+}
 .abb{
-  padding-left: 80px;
-  padding-right: 80px;
   display: flex;
   justify-content: space-evenly;
   gap: 1px;
